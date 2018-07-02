@@ -4,9 +4,9 @@ Hello! I am currently a graduate student at Rennselaer Polytechnic Institute in 
 
 ## Education
 
-**Ph.D. in Mathematics** (Expected Spring 2022) \hfill Rennselaer Polytechnic Institute
+**Ph.D. in Mathematics** (Expected Spring 2022) Rennselaer Polytechnic Institute
 
-**B.S. in Mathematics** \hfill Winona State University
+**B.S. in Mathematics** Winona State University
 * Statistics Minor
 * Graduated Summa Cum Laude
 
