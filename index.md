@@ -1,4 +1,4 @@
-# Mathematics Graduate Student.
+## Summary
 
 Hello! I am currently a graduate student at Rennselaer Polytechnic Institute in Troy, New York. I am pursuing a Ph.D. in Mathematics. Outside of class, I enjoy hiking, rock climbing, kayaking, and laying in the sun.
 
