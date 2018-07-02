@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# Mathematics Graduate Student.
 
-You can use the [editor on GitHub](https://github.com/gmancino/gmancino.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Hello! I am currently a graduate student at Rennselaer Polytechnic Institute in Troy, New York. I am pursuing a Ph.D. in Mathematics. Outside of class, I enjoy hiking, rock climbing, kayaking, and laying in the sun.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Education
 
-### Markdown
+**Ph.D. in Mathematics** (Expected Spring 2022) \hfill Rennselaer Polytechnic Institute
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**B.S. in Mathematics** \hfill Winona State University
+* Statistics Minor
+* Graduated Summa Cum Laude
 
-```markdown
-Syntax highlighted code block
+## Interests
 
-# Header 1
-## Header 2
-### Header 3
+**Teaching:** Passing on the knowledge of computational and theoretical mathematics to those willing to learn.
 
-- Bulleted
-- List
+**Mathematical Modeling:** Solving today's problems with the power of mathematics.
 
-1. Numbered
-2. List
+**Data Analysis:** Using the abundance of data in the world to answer important questions.
 
-**Bold** and _Italic_ and `Code` text
+## Activities
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/gmancino/gmancino.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**Conference Talks:** Pi Mu Epsilon (Fall 2017 and Spring 2018).
