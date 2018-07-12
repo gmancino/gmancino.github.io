@@ -1,4 +1,5 @@
-# Mathematics Graduate Student
+# Gabriel Mancino-Ball.
+# Mathematics Graduate Student.
 
 ## Summary
 
