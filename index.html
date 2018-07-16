@@ -37,7 +37,7 @@ div.wrapper {
 						      
 						      
 <!-- Header style. -->
-.myheader {
+header {
 	border-radius: 5px;
 	border: 2px solid black;
 	text-align: center;
@@ -61,6 +61,11 @@ div.wrapper {
 h1 {
 	color: black;
 	border-bottom: 1px solid black;
+}
+				  
+header.h1 {
+	color: black;
+	float: left;
 }
 
 footer {
@@ -94,7 +99,7 @@ div a:active {
 
 
 .topnav a {
-    float: left;
+    float: right;
     display: block;
     color: black;
     text-align: center;
@@ -115,12 +120,16 @@ div a:active {
 				 
 <div class="wrapper">
 <div class="container">
-	<h1>Gabriel Mancino-Ball</h1>
+		    
+	<div class=header">
 	<div class="topnav">
-  		<a href="Mancino-Ball_CV.pdf"><b>Resume</b></a>
-  		<a href="#"><b>Teaching</b></a>
-  		<a href="#"><b>Projects</b></a>
+  		<a href="#"><h2>Resume</h2></a>
+  		<a href="#"><h2>Teaching</h2></a>
+  		<a href="#"><h2>Projects</h2></a>
 	</div>
+	</div>
+		    
+	<h1>Gabriel Mancino-Ball</h1>
 	<br>
 	<br>
 	<img src="images/headshot.png" alt="Headshot" border="1">
