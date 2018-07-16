@@ -45,7 +45,12 @@ header {
 h1 {
 	color: black;
 	padding-bottom: 50px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px double black;
+}
+
+h3 {
+	color: black;
+	border-bottom: 1px black;
 }
 				  
 header.h1 {
@@ -61,7 +66,7 @@ footer {
 div a:link {
 	text-decoration: none;
 	background-color: transparent;
-	color: red;
+	color: black;
 }
 div a:visited {
 	text-decoration: none;
