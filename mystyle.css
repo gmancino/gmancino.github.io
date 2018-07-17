@@ -28,7 +28,7 @@ header {
 	border: 2px solid black;
 	text-align: center;
 	font-family: "Courier New", monospace;
-	padding: 10%;
+	padding: 5%;
 	background: #737272;
 	color: black;
 }
@@ -37,7 +37,7 @@ header {
 	border: 2px solid black;
 	text-align: left;
 	font-family: "Courier New", monospace;
-	padding: 10%;
+	padding: 5%;
 	background: white;
 	color: black;
 	margin-top: 10%;
@@ -47,7 +47,7 @@ header {
 }
 h1 {
 	color: black;
-	padding-bottom: 10%;
+	padding-bottom: 5%;
 	border-bottom: 1px double black;
 	font-family: "Courier New", monospace;
 }
@@ -55,7 +55,7 @@ h1 {
 h3 {
 	color: black;
 	border-bottom: 1px black;
-	margin: 3%;
+	margin: 1%;
 	font-family: "Courier New", monospace;
 }
 				  
