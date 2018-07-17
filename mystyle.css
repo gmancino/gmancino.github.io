@@ -118,6 +118,7 @@ div a:active {
     padding-right: 3%;
     text-decoration: none;
     font-size: large;
+    overflow: auto;
 }
 .topnav a:hover {
     background-color: white;
