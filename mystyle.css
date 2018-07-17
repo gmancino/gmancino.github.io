@@ -86,13 +86,7 @@ div a:active {
 .header-right {
 	float: right;
 }
-.header ul {
-	list-style-type: none;
-	margin: 5px;
-}
-.header li {
-	display: inline;	
-}
+
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
