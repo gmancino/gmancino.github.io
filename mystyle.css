@@ -50,6 +50,7 @@ h1 {
 	padding-bottom: 5%;
 	border-bottom: 1px double black;
 	font-family: "Courier New", monospace;
+	font-weight: bold;
 }
 
 h3 {
@@ -57,12 +58,14 @@ h3 {
 	border-bottom: 1px black;
 	margin: 1%;
 	font-family: "Courier New", monospace;
+	font-weight: bold;
 }
 				  
 header.h1 {
 	color: black;
 	float: left;
 	font-family: "Courier New", monospace;
+	font-weight: bold;
 }
 footer {
 	text-align: center;
