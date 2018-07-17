@@ -77,6 +77,7 @@ div a:active {
     	padding-right: 3%;
     	text-decoration: none;
     	font-size: large;
+	white-space: nowrap;
 }
 .header a:hover {
     background-color: white;
