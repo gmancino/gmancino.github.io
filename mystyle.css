@@ -53,6 +53,13 @@ h1 {
 	font-weight: bold;
 }
 
+h2 {
+	color: black;
+	margin: 1%;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+}
+
 h3 {
 	color: black;
 	border-bottom: 1px black;
