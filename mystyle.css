@@ -21,10 +21,7 @@ div.wrapper {
 	border: 2px solid black;
 	text-align: left;
 	font-family: "Courier New", monospace;
-	padding-top: 5%;
-	padding-left: 5%;
-	padding-right: 5%;
-	padding-bottom: 2%
+	padding: 5%;
 	background: white;
 	color: black;
 	margin-top: 7.5%;
