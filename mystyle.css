@@ -119,16 +119,11 @@ h3 {
 	font-weight: bold;
 }
 				  
-header.h2 {
-	color: black;
-	float: left;
-	font-family: "Courier New", monospace;
-	font-weight: bold;
-}
 footer {
 	text-align: center;
 	font-size: small;
 }
+
 <!-- List style. -->
 ul {
 	line-height: 2%;
