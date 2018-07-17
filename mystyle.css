@@ -37,29 +37,32 @@ header {
 	border: 2px solid black;
 	text-align: left;
 	font-family: "Courier New", monospace;
-	padding: 50px;
+	padding: 10%;
 	background: white;
 	color: black;
-	margin-top: 15%;
-	margin-bottom: 10%;
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+	margin-left: 15%;
+	margin-right: 15%;
 }
 h1 {
 	color: black;
 	padding-bottom: 10%;
 	border-bottom: 1px double black;
+	font-family: "Courier New", monospace;
 }
 
 h3 {
 	color: black;
 	border-bottom: 1px black;
 	margin: 3%;
+	font-family: "Courier New", monospace;
 }
 				  
 header.h1 {
 	color: black;
 	float: left;
+	font-family: "Courier New", monospace;
 }
 footer {
 	text-align: center;
