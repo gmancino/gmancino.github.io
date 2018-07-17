@@ -37,10 +37,7 @@ header {
 	border: 2px solid black;
 	text-align: left;
 	font-family: "Courier New", monospace;
-	padding-top: 50px;
-	padding-left: 100px
-	padding-right: 100px;
-	padding-bottom: 50px;
+	padding: 50px;
 	background: white;
 	color: black;
 	margin: 125px;
