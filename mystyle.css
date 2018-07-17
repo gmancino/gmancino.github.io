@@ -24,7 +24,7 @@ div.wrapper {
 						      
 <!-- Header style. -->
 header {
-	text-align: center;
+	text-align: left;
 	font-family: "Courier New", monospace;
 	padding: 5%;
         border-bottom: 1px double black;
