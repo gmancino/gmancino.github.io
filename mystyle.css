@@ -64,7 +64,11 @@ footer {
 	text-align: center;
 	font-size: small;
 }
-<!-- Column style. -->
+<!-- List style. -->
+ul {
+	line-height: 2em;
+}
+
 <!-- Link style. -->
 div a {
 	text-decoration: none;
