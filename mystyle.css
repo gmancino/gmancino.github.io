@@ -118,3 +118,6 @@ div a:active {
     background-color: white;
     color: black;
 }
+.topnav-left {
+  float: left;
+}
