@@ -110,7 +110,7 @@ div a:active {
 	color: black;
 }
 .topnav a {
-    float: right;
+    float: left;
     display: block;
     color: black;
     text-align: center;
