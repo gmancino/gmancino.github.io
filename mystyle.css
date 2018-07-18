@@ -120,6 +120,27 @@ h3 {
 	font-family: "Courier New", monospace;
 	font-weight: bold;
 }
+
+h4 {
+	color: black;
+	margin: 1%;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+}
+
+h5 {
+	color: black;
+	margin: 1%;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+}
+
+h6 {
+	color: black;
+	margin: 1%;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+}
 				  
 footer {
 	text-align: center;
