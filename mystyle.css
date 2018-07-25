@@ -143,8 +143,10 @@ h6 {
 }
 				  
 footer {
+	margin-top: 5%;
+	margin-bottom: 1%;
 	text-align: center;
-	font-size: small;
+	font-size: x-small;
 }
 
 <!-- List style. -->
