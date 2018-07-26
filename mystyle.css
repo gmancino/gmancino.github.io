@@ -99,10 +99,11 @@ div a:active {
   }
 }
 
-h1 {
+<!-- Only used on 404 page. -->
+h1 { 
 	color: black;
-	padding-bottom: 5%;
-	border-bottom: 1px double black;
+	margin: 2%;
+	margin-top: 5%;
 	font-family: "Courier New", monospace;
 	font-weight: bold;
 }
