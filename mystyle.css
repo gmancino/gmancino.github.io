@@ -80,6 +80,10 @@ a:active {
 	text-decoration: underline;
     	color: #5BA5C3;
 }
+.header a:active {
+	text-decoration: none;
+	background-color: transparent;
+}
 .header right {
 	float: right;
 	display: inline-block;
