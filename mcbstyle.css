@@ -158,5 +158,6 @@ footer {
 /* Project title */
 h5 {
 	font-weight: bold;
-	font-size: large;
+	font-size: +2;
+	text-decoration: underline;
 }
