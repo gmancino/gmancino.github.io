@@ -1,0 +1,154 @@
+* {
+	box-sizing: border-box;
+}
+						    						      
+/* Page style */
+div.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0.01%;
+    padding-bottom: 0.02%;
+    padding-right: 0.01%;
+    padding-left: 0.01%;
+}
+
+.container {
+	border-radius: 5px;
+	text-align: left;
+	font-family: "Fira Sans";
+	font-size: 1.25em;
+	padding-top: 0%;
+	padding: 5%;
+	padding-bottom: 0%;
+	background: #FFFFFF;
+	color: #000000;
+	margin-top: 1%;
+	margin-bottom: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/* Navigation list style */
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.75em;
+  overflow: hidden;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a:link {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 12px 15px;
+  text-decoration: none;
+}
+
+.nav li a:visited {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.nav li a:hover {
+	background-color: transparent;
+	color: #5BA5C3;
+}
+
+.nav li a:hover:not(.active) {
+  background-color: transparent;
+  color: #5BA5C3;
+}
+
+.nav li a.active {
+  background-color: transparent;
+  border-left: 6px solid;
+  border-color: #5BA5C3;
+}
+
+/* Contact list style */
+.contact ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contact li {
+  text-align: center;
+  display: inline-block;
+}
+
+.contact li a:link {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 12px 15px;
+  text-decoration: none;
+}
+
+.contact li a:visited {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.contact li a:hover {
+	background-color: transparent;
+	color: #5BA5C3;
+}
+
+.contact li a.active {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Link style */
+a {
+	text-decoration: none;
+	position: relative;
+	background-color: transparent;
+}
+
+a:link {
+	text-decoration: none;
+	background-color: transparent;
+}
+a:visited {
+	text-decoration: none;
+	background-color: transparent;
+}
+a:hover {
+	background-color: transparent;
+	color: #5BA5C3;
+}
+a:active {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 400px) {
+.nav li a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Define footer */
+footer {
+	margin-top: 5%;
+	margin-bottom: 1%;
+	margin-left: auto;
+  margin-right: auto;
+	text-align: center;
+	font-size: x-small;
+}
