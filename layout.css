@@ -247,6 +247,12 @@ footer a:hover {
   width: 10vw;
 }
 
+/* Add current section */
+#current h6 {
+  font-size: inherit;
+  display: inline;
+}
+
 /* Add interests section */
 .row {
   display: flex;

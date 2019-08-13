@@ -1,6 +1,47 @@
 // Create about me
 const aboutInfo = e('h5', null, 'Hello! My name is Gabriel, but you can call me Gabe. I currently study mathematics at Rensselaer Polytechnic Institute in Troy, New York. My research interests lie in the applications of optimization and probability theory to solve machine learning problems.', e('br', null));
 
+// Make Branin-Hoo function
+function branin(x, y) {
+  var x = x.valueOf();
+  var y = y.valueOf();
+  var a = 1;
+  var b = 5.1 / (4 * Math.pow(Math.PI, 2));
+  var c = 5 / Math.PI;
+  var r = 6;
+  var s = 10;
+  var t = 1 / (8 * Math.PI);
+
+  return(
+    a * Math.pow(y - b * Math.pow(x, 2) + c * x - r, 2) + s * (1 - t) * Math.cos(x) + s
+  )
+};
+
+// Make class for displaying Branin-Hoo
+class Func extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { x: 0, y: 0 };
+  }
+
+  _onMouseMove(e) {
+    this.setState({ x: e.screenX, y: e.screenY });
+  }
+
+  render() {
+    const { x, y } = this.state;
+    return (
+      e(
+        'div',
+        {onMouseMove: this._onMouseMove.bind(this), style: {border: "3px solid", padding: "5px"}},
+        e('h4', null, 'Input values : (' + x.toString() + ', ' + y.toString() + ')'),
+        e('h4', null, 'Objective value : ' + branin(x, y))
+    )
+  )
+  }
+};
+
 // Define main class for making blocks
 class Parent extends React.Component {
   constructor (props) {
@@ -104,13 +145,21 @@ function job(title, location, image_path, link, details) {
 // Image interest grid
 const interestGrid = e('div', {className: "row"},
   e('div', {className: "column"}, e('img', {src: "images/shows/marvel.jpg", alt: 'Marvel'}),
-    e('img', {src: "images/shows/strangerthings.jpg", alt: 'Stranger Things'}),
+    e('img', {src: "images/music/joyner.jpg", alt: 'Joyner'}),
+    e('img', {src: "images/other/boxing.png", alt: 'Boxing'}),
     e('img', {src: "images/shows/office.jpg", alt: 'The Office'}),
-    e('img', {src: "images/music/quinn.jpg", alt: 'Quinn'})),
+    e('img', {src: "images/music/quinn.jpg", alt: 'Quinn'}),
+    e('img', {src: "images/other/stack.png", alt: 'Stack Exchange'})),
   e('div', {className: "column"}, e('img', {src: "images/music/lildicky.jpg", alt: 'LD'}),
-    e('img', {src: "images/music/griz.jpg", alt: 'Griz'})),
+    e('img', {src: "images/shows/johnwick.jpg", alt: 'John Wick'}),
+    e('img', {src: "images/music/griz.jpg", alt: 'Griz'}),
+    e('img', {src: "images/other/alphago.png", alt: 'Alpha Go'}),
+    e('img', {src: "images/music/buble.jpg", alt: 'Michael Buble'})),
   e('div', {className: "column"}, e('img', {src: "images/other/nature.jpeg", alt: 'Nature'}),
-    e('img', {src: "images/other/food.jpeg", alt: 'Food'}))
+    e('img', {src: "images/shows/strangerthings.jpg", alt: 'Stranger Things'}),
+    e('img', {src: "images/other/food.jpeg", alt: 'Food'}),
+    e('img', {src: "images/music/ed.jpg", alt: 'Ed'}),
+    e('img', {src: "images/shows/ldr.jpg", alt: 'LDR'}))
 );
 
 // Render about me
@@ -119,10 +168,13 @@ ReactDOM.render(
   document.getElementById('about')
 );
 
-// Render current projects
+// Render current endeavors
 ReactDOM.render(
   e(Parent, {title: 'Things I\'m doing',
-  info: 'asdf'}),
+  info: [e('h5', null, 'Try finding the ', e('h6', {style: {color: "#FF0000"}}, 'minimum'), ' objective value in the box below.'),
+    e(Func, null),
+    e('br', null),
+    e('h5', null, 'Pretty hard right? This is called ', e('h6', {style: {color: "#FF0000"}}, '\'Black Box\' optimization'), ' and I think it is very interesting! This is what I study at Rensselaer Polytechnic Institute.')]}),
   document.getElementById('current')
 );
 
@@ -135,7 +187,7 @@ ReactDOM.render(
     e('br', null),
     job('Teaching Assistant', 'Rensselaer Polytechnic Institute', 'images/jobs/rpi.png', 'https://science.rpi.edu/mathematical-sciences', rpiDetails()),
     e('br', null),
-    job('Logistic Regression Classification', 'MATH 6600', 'images/other/math.png', "blank", logRegDetails()),
+    job('Logistic Regression Classification', 'MATH 6600', 'images/other/math.png', "docs/OptimizationProject.pdf", logRegDetails()),
     e('br', null)]}),
   document.getElementById('past')
 );
