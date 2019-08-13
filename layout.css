@@ -181,8 +181,6 @@ footer a:hover {
 }
 
 #past li {
-  border: 3px solid var(--header-bg-color);
-  border-radius: 50%;
   text-align: center;
   margin: 2%;
   padding: 2%;
@@ -272,4 +270,77 @@ footer a:hover {
 
 .column img:hover {
   width: 21vw;
+}
+
+/* Add icon hover */
+/* Python logo */
+.fa-python {
+  border: 3px solid var(--header-bg-color);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.fa-python:hover {
+  color: #4B8BBE;
+  border: 3px solid #FFD43B;
+}
+
+/* React logo */
+.fa-react {
+  border: 3px solid var(--header-bg-color);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.fa-react:hover {
+  color: #61DBFB;
+  border: 3px solid var(--black);
+}
+
+/* AWS logo */
+.fa-aws {
+  border: 3px solid var(--header-bg-color);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.fa-aws:hover {
+  color: #FF9900;
+  border: 3px solid #232F3E;
+}
+
+/* Docker logo */
+.fa-docker {
+  border: 3px solid var(--header-bg-color);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.fa-docker:hover {
+  color: #0DB7ED;
+  border: 3px solid #384D54;
+}
+
+/* CSS logo */
+.fa-css3-alt {
+  border: 3px solid var(--header-bg-color);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.fa-css3-alt:hover {
+  color: #3C99DC;
+  border: 3px solid #0F5298;
+}
+
+/* HTML logo */
+.fa-html5 {
+  border: 3px solid var(--header-bg-color);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.fa-html5:hover {
+  color: var(--black);
+  border: 3px solid #E44D26;
 }
