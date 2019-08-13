@@ -278,6 +278,9 @@ footer a:hover {
   border: 3px solid var(--header-bg-color);
   border-radius: 50%;
   padding: 10px;
+  transition: color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .fa-python:hover {
@@ -290,6 +293,9 @@ footer a:hover {
   border: 3px solid var(--header-bg-color);
   border-radius: 50%;
   padding: 10px;
+  transition: color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .fa-react:hover {
@@ -312,6 +318,9 @@ footer .fa-react:hover {
   border: 3px solid var(--header-bg-color);
   border-radius: 50%;
   padding: 10px;
+  transition: color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .fa-aws:hover {
@@ -324,6 +333,9 @@ footer .fa-react:hover {
   border: 3px solid var(--header-bg-color);
   border-radius: 50%;
   padding: 10px;
+  transition: color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .fa-docker:hover {
@@ -336,6 +348,9 @@ footer .fa-react:hover {
   border: 3px solid var(--header-bg-color);
   border-radius: 50%;
   padding: 10px;
+  transition: color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .fa-css3-alt:hover {
@@ -348,6 +363,9 @@ footer .fa-react:hover {
   border: 3px solid var(--header-bg-color);
   border-radius: 50%;
   padding: 10px;
+  transition: color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .fa-html5:hover {
