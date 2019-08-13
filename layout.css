@@ -297,6 +297,16 @@ footer a:hover {
   border: 3px solid var(--black);
 }
 
+footer .fa-react {
+  border: none;
+  display: inline;
+}
+
+footer .fa-react:hover {
+  border: none;
+  color: inherit;
+}
+
 /* AWS logo */
 .fa-aws {
   border: 3px solid var(--header-bg-color);
