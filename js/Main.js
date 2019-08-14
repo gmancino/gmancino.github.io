@@ -32,7 +32,7 @@ function eggholder(x, y) {
 function numToColor(x) {
   // Stolen from stack exchange
   if (x < 0) {
-    var x = Math.abs(x);
+    var x = Math.pow(x, 2);
   }
 
   var r = x / Math.pow(256, 2);
