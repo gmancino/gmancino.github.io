@@ -52,7 +52,7 @@ class Func extends React.Component {
     return (
       e(
         'div',
-        {onMouseMove: this._onMouseMove.bind(this), style: {border: "3px solid", padding: "5px"}},
+        {onClick: this._onMouseMove.bind(this), style: {border: "3px solid", padding: "5px"}},
         e('h4', null, 'Input values : (' + x.toString() + ', ' + y.toString() + ')'),
         e('h4', null, 'Objective value : ', attention(eggholder(x, y).toString(), numToColor(eggholder(x, y)) ))
       )
@@ -197,7 +197,7 @@ ReactDOM.render(
 // Render current endeavors
 ReactDOM.render(
   e(Parent, {title: 'Things I\'m doing',
-  info: [e('h5', null, 'Try finding the ', attention('smallest', highlightColor), ' objective value in the box below.'),
+  info: [e('h5', null, 'Click around in the box below to see if you can find the ', attention('smallest', highlightColor), ' objective value.'),
     e(Func, null),
     e('br', null),
     e('h5', null, 'Pretty hard right? This is called ', attention('derivative-free optimization', highlightColor),
