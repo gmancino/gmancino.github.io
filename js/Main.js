@@ -1,10 +1,3 @@
-// Create about me
-const aboutInfo = e('h5', null, 'Hello! My name is Gabriel, but you can call me Gabe.' +
- ' I currently study mathematics at Rensselaer Polytechnic Institute in Troy, New York.' +
- ' My research interests lie in the applications of optimization and probability theory to solve machine learning problems.',
- e('br', null));
-
-
 /*
 * Define all custom functions used throughout
 */
@@ -188,6 +181,12 @@ const interestGrid = e('div', {className: "row"},
     e('div', {className: "image-container"}, e('img', {src: "images/music/ed.jpg", alt: 'Ed Sheeran'}), e('div', {className: "image-text"}, 'Lullabies and bangers')),
     e('div', {className: "image-container"}, e('img', {src: "images/shows/ldr.jpg", alt: 'LDR'}), e('div', {className: "image-text"}, 'The Secret War')))
 );
+
+// Create about me
+const aboutInfo = e('h5', null, 'Hello! My name is Gabriel, but you can call me Gabe.' +
+ ' I currently study mathematics at Rensselaer Polytechnic Institute in Troy, New York.' +
+ ' My research interests lie in the applications of optimization and probability theory to solve machine learning problems.',
+ e('br', null));
 
 // Render about me
 ReactDOM.render(
