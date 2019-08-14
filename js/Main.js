@@ -117,7 +117,7 @@ function threeMDetails() {
   return(
     e('div', null,
       e('h5', null, 'I worked in the Software Research Lab. It was an awesome learning experience.' +
-      ' We were able to solve an interesting computer vision problem involving finding the distance between two objects in an image (provided we made certain assumptions).'),
+      ' We were able to solve an interesting computer vision problem that involved finding the distance between two objects in an image (provided we made certain assumptions).'),
       e('br', null),
       e('h5', null, 'In addition to solving this problem locally, we used AWS to automate solving this vision problem.'),
       e('br', null),
@@ -175,7 +175,7 @@ const interestGrid = e('div', {className: "row"},
     e('div', {className: "image-container"}, e('img', {src: "images/music/griz.jpg", alt: 'GRiZ'}), e('div', {className: "image-text"}, 'Dude puts on AMAZING shows')),
     e('div', {className: "image-container"}, e('img', {src: "images/other/alphago.png", alt: 'AlphaGo'}), e('div', {className: "image-text"}, 'Such an impressive feat')),
     e('div', {className: "image-container"}, e('img', {src: "images/music/buble.jpg", alt: 'Michael Buble'}), e('div', {className: "image-text"}, 'Serenade me'))),
-  e('div', {className: "column"}, e('div', {className: "image-container"}, e('img', {src: "images/other/nature.jpeg", alt: 'Nature'}), e('div', {className: "image-text"}, 'Nature is first love')),
+  e('div', {className: "column"}, e('div', {className: "image-container"}, e('img', {src: "images/other/nature.jpeg", alt: 'Nature'}), e('div', {className: "image-text"}, 'Nature is my first love')),
     e('div', {className: "image-container"}, e('img', {src: "images/shows/strangerthings.jpg", alt: 'Stranger Things'}), e('div', {className: "image-text"}, 'Binged this whole show in two weeks')),
     e('div', {className: "image-container"}, e('img', {src: "images/other/food.jpeg", alt: 'Food'}), e('div', {className: "image-text"}, 'FEED ME')),
     e('div', {className: "image-container"}, e('img', {src: "images/music/ed.jpg", alt: 'Ed Sheeran'}), e('div', {className: "image-text"}, 'Lullabies and bangers')),
