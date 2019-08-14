@@ -1,20 +1,46 @@
 // Create about me
-const aboutInfo = e('h5', null, 'Hello! My name is Gabriel, but you can call me Gabe. I currently study mathematics at Rensselaer Polytechnic Institute in Troy, New York. My research interests lie in the applications of optimization and probability theory to solve machine learning problems.', e('br', null));
+const aboutInfo = e('h5', null, 'Hello! My name is Gabriel, but you can call me Gabe.' +
+ ' I currently study mathematics at Rensselaer Polytechnic Institute in Troy, New York.' +
+ ' My research interests lie in the applications of optimization and probability theory to solve machine learning problems.',
+ e('br', null));
 
-// Make Branin-Hoo function
-function branin(x, y) {
+
+/*
+* Define all custom functions used throughout
+*/
+
+const highlightColor = '#FF847C'
+
+// Make alert block for highlighting text
+function attention(args, color) {
+  if (typeof args == 'string') {
+    return e('h6', {style: {color: color}}, args);
+  }
+  return e('h6', {style: {color: color}}, 'CHANGE YOUR INPUT TYPE TO STRING!!');
+};
+
+// Make eggholder function
+function eggholder(x, y) {
   var x = x.valueOf();
   var y = y.valueOf();
-  var a = 1;
-  var b = 5.1 / (4 * Math.pow(Math.PI, 2));
-  var c = 5 / Math.PI;
-  var r = 6;
-  var s = 10;
-  var t = 1 / (8 * Math.PI);
 
   return(
-    a * Math.pow(y - b * Math.pow(x, 2) + c * x - r, 2) + s * (1 - t) * Math.cos(x) + s
+    -(y + 47) * Math.sin(Math.pow(Math.abs( (x / 2) + (y + 47)), 1 / 2)) - x * Math.sin(Math.pow(Math.abs(x - (y + 47)), 1 /2))
   )
+};
+
+// Make function for turning output value into Hex
+function numToColor(x) {
+  // Stolen from stack exchange
+  if (x < 0) {
+    var x = Math.abs(x);
+  }
+
+  var r = x / Math.pow(256, 2);
+  var g = (x / 256) % 256;
+  var b = x % 256;
+
+  return 'rgb(' + r.toString() + ',' + g.toString() + ',' + b.toString() + ')';
 };
 
 // Make class for displaying Branin-Hoo
@@ -36,13 +62,13 @@ class Func extends React.Component {
         'div',
         {onMouseMove: this._onMouseMove.bind(this), style: {border: "3px solid", padding: "5px"}},
         e('h4', null, 'Input values : (' + x.toString() + ', ' + y.toString() + ')'),
-        e('h4', null, 'Objective value : ' + branin(x, y))
+        e('h4', null, 'Objective value : ', attention(eggholder(x, y).toString(), numToColor(eggholder(x, y)) ))
+      )
     )
-  )
   }
 };
 
-// Define main class for making blocks
+// Define main class for making toggle blocks
 class Parent extends React.Component {
   constructor (props) {
     super(props);
@@ -98,13 +124,14 @@ function threeMTech() {
 function threeMDetails() {
   return(
     e('div', null,
-      e('h5', null, 'I worked in the Software Research Lab. It was an awesome learning experience. We were able to solve an interesting computer vision problem involving finding the distance between two objects in an image (provided we made certain assumptions).'),
+      e('h5', null, 'I worked in the Software Research Lab. It was an awesome learning experience.' +
+      ' We were able to solve an interesting computer vision problem involving finding the distance between two objects in an image (provided we made certain assumptions).'),
       e('br', null),
       e('h5', null, 'In addition to solving this problem locally, we used AWS to automate solving this vision problem.'),
       e('br', null),
       threeMTech(),
       e('br', null),
-      e('h5', {display: "inline"}, 'They liked me enough to invite me back. See you in 2020, ', e('h6', {style: {color: "#FF0000"}}, ' Artifical Intelligence Lab!'))
+      e('h5', {display: "inline"}, 'They liked me enough to invite me back. See you in 2020, ', attention('Artificial Intelligence Lab!', highlightColor))
     )
 )};
 
@@ -114,7 +141,7 @@ function rpiDetails() {
     e('div', null,
       e('h5', null, 'I did regular TA things here. Grading homework, quizzes, and exams. Hosting office hours to give students extra help. I made all of my own quizzes, which is pretty cool.'),
       e('br', null),
-      e('h5', {display: "inline"}, 'My average overall student approval rating is ', e('h6', {style: {color: "#FF0000"}}, ' 4.55/5.0! '), e('h6', null, ' I\'m pretty proud of this!'))
+      e('h5', {display: "inline"}, 'My average overall student approval rating is ', attention('4.55/5.0!', highlightColor), e('h6', null, ' I\'m pretty proud of this!'))
     )
 )};
 
@@ -171,10 +198,11 @@ ReactDOM.render(
 // Render current endeavors
 ReactDOM.render(
   e(Parent, {title: 'Things I\'m doing',
-  info: [e('h5', null, 'Try finding the ', e('h6', {style: {color: "#FF0000"}}, 'minimum'), ' objective value in the box below.'),
+  info: [e('h5', null, 'Try finding the ', attention('smallest', highlightColor), ' objective value in the box below.'),
     e(Func, null),
     e('br', null),
-    e('h5', null, 'Pretty hard right? This is called ', e('h6', {style: {color: "#FF0000"}}, '\'Black Box\' optimization'), ' and I think it is very interesting! This is what I study at Rensselaer Polytechnic Institute.')]}),
+    e('h5', null, 'Pretty hard right? This is called ', attention('derivative-free optimization', highlightColor),
+    ' and I think it is very interesting! This is what I study at Rensselaer Polytechnic Institute.')]}),
   document.getElementById('current')
 );
 
