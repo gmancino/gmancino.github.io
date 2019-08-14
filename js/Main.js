@@ -8,7 +8,6 @@ const aboutInfo = e('h5', null, 'Hello! My name is Gabriel, but you can call me 
 /*
 * Define all custom functions used throughout
 */
-
 const highlightColor = '#FF847C'
 
 // Make alert block for highlighting text
@@ -170,23 +169,24 @@ function job(title, location, image_path, link, details) {
 };
 
 // Image interest grid
+// This is gross, I am so sorry :'(
 const interestGrid = e('div', {className: "row"},
-  e('div', {className: "column"}, e('img', {src: "images/shows/marvel.jpg", alt: 'Marvel'}),
-    e('img', {src: "images/music/joyner.jpg", alt: 'Joyner'}),
-    e('img', {src: "images/other/boxing.png", alt: 'Boxing'}),
-    e('img', {src: "images/shows/office.jpg", alt: 'The Office'}),
-    e('img', {src: "images/music/quinn.jpg", alt: 'Quinn'}),
-    e('img', {src: "images/other/stack.png", alt: 'Stack Exchange'})),
-  e('div', {className: "column"}, e('img', {src: "images/music/lildicky.jpg", alt: 'LD'}),
-    e('img', {src: "images/shows/johnwick.jpg", alt: 'John Wick'}),
-    e('img', {src: "images/music/griz.jpg", alt: 'Griz'}),
-    e('img', {src: "images/other/alphago.png", alt: 'Alpha Go'}),
-    e('img', {src: "images/music/buble.jpg", alt: 'Michael Buble'})),
-  e('div', {className: "column"}, e('img', {src: "images/other/nature.jpeg", alt: 'Nature'}),
-    e('img', {src: "images/shows/strangerthings.jpg", alt: 'Stranger Things'}),
-    e('img', {src: "images/other/food.jpeg", alt: 'Food'}),
-    e('img', {src: "images/music/ed.jpg", alt: 'Ed'}),
-    e('img', {src: "images/shows/ldr.jpg", alt: 'LDR'}))
+  e('div', {className: "column"}, e('div', {className: "image-container"}, e('img', {src: "images/shows/marvel.jpg", alt: 'Marvel'}), e('div', {className: "image-text"}, 'I <3 Iron Man')),
+    e('div', {className: "image-container"}, e('img', {src: "images/music/joyner.jpg", alt: 'Joyner Lucas'}), e('div', {className: "image-text"}, 'Unparalleled flow')),
+    e('div', {className: "image-container"}, e('img', {src: "images/other/boxing.png", alt: 'Boxing'}), e('div', {className: "image-text"}, 'Chess, but with your body')),
+    e('div', {className: "image-container"}, e('img', {src: "images/shows/office.jpg", alt: 'The Office'}), e('div', {className: "image-text"}, 'Jim is my spirit animal')),
+    e('div', {className: "image-container"}, e('img', {src: "images/music/quinn.jpg", alt: 'Quinn XCII'}), e('div', {className: "image-text"}, 'On a beach, in a car, wherever')),
+    e('div', {className: "image-container"}, e('img', {src: "images/other/stack.png", alt: 'Stack Exchange'}), e('div', {className: "image-text"}, 'Omnipresent in my life'))),
+  e('div', {className: "column"}, e('div', {className: "image-container"}, e('img', {src: "images/music/lildicky.jpg", alt: 'Lil\' Dicky'}), e('div', {className: "image-text"}, 'Hopefully you know something other than \'Freaky Friday\'')),
+    e('div', {className: "image-container"}, e('img', {src: "images/shows/johnwick.jpg", alt: 'John Wick'}), e('div', {className: "image-text"}, 'Don\'t steal cars, kids')),
+    e('div', {className: "image-container"}, e('img', {src: "images/music/griz.jpg", alt: 'GRiZ'}), e('div', {className: "image-text"}, 'Dude puts on AMAZING shows')),
+    e('div', {className: "image-container"}, e('img', {src: "images/other/alphago.png", alt: 'AlphaGo'}), e('div', {className: "image-text"}, 'Such an impressive feat')),
+    e('div', {className: "image-container"}, e('img', {src: "images/music/buble.jpg", alt: 'Michael Buble'}), e('div', {className: "image-text"}, 'Serenade me'))),
+  e('div', {className: "column"}, e('div', {className: "image-container"}, e('img', {src: "images/other/nature.jpeg", alt: 'Nature'}), e('div', {className: "image-text"}, 'Nature is first love')),
+    e('div', {className: "image-container"}, e('img', {src: "images/shows/strangerthings.jpg", alt: 'Stranger Things'}), e('div', {className: "image-text"}, 'Binged this whole show in two weeks')),
+    e('div', {className: "image-container"}, e('img', {src: "images/other/food.jpeg", alt: 'Food'}), e('div', {className: "image-text"}, 'FEED ME')),
+    e('div', {className: "image-container"}, e('img', {src: "images/music/ed.jpg", alt: 'Ed Sheeran'}), e('div', {className: "image-text"}, 'Lullabies and bangers')),
+    e('div', {className: "image-container"}, e('img', {src: "images/shows/ldr.jpg", alt: 'LDR'}), e('div', {className: "image-text"}, 'The Secret War')))
 );
 
 // Render about me

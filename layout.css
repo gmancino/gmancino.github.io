@@ -352,13 +352,37 @@ footer a:hover {
   padding: 5px;
 }
 
-.column img {
-  width: 20vw;
-  transition: width;
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.image-text {
+  position: absolute;
+  font-size: small;
+  color: var(--black);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
 
-.column img:hover {
-  width: 21vw;
+.column img {
+  width: 20vw;
+  opacity: 1;
+  border: 5px solid var(--bg-color);
+  transition: opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.image-container:hover img {
+  opacity: 0.05;
+}
+
+.image-container:hover .image-text {
+  opacity: 1;
 }
