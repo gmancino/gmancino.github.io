@@ -6,7 +6,7 @@ const e = React.createElement;
 // EDIT ME TO CHANGE INFORMATION
 const user = {
   name: 'Gabriel Mancino-Ball',
-  title: 'Mathematics. Development. Design.',
+  description: 'Mathematics. Development. Design.',
   image: 'images/headshot.png',
   logo: 'images/uplogo.png',
   headerLinks: ['https://github.com/gmancino',
@@ -34,7 +34,7 @@ const header = e(
         e('i', {className: "fas fa-envelope-open-text"})
       )
     ),
-  e('h3', null, user.title,
+  e('h3', null, user.description,
   e('img', {src: user.image}))
   )
 );

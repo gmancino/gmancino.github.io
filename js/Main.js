@@ -13,9 +13,9 @@ function attention(args, color) {
 
 // Make eggholder function
 function eggholder(x, y) {
+  // Turn object to float
   var x = x.valueOf();
   var y = y.valueOf();
-
   return(
     Math.round(-(y + 47) * Math.sin(Math.pow(Math.abs( (x / 2) + (y + 47)), 1 / 2)) - x * Math.sin(Math.pow(Math.abs(x - (y + 47)), 1 /2)))
   )
@@ -23,11 +23,11 @@ function eggholder(x, y) {
 
 // Make function for turning output value into Hex
 function numToColor(x) {
-  // Stolen from stack exchange
   if (x < 0) {
     var x = Math.pow(x, 2);
   }
 
+  // Stolen from stack exchange
   var r = x / Math.pow(256, 2);
   var g = (x / 256) % 256;
   var b = x % 256;
@@ -98,10 +98,9 @@ class Parent extends React.Component {
 // Create functions for rendering different things in body of page
 
 // Custom 3M technology used
-function threeMTech() {
+function mmmTech() {
   return(
-  e('div', null,
-  e('h5', null, 'Technologies used:'),
+  e('div', {className: "tech"},
   e('ul', null,
     e('li', null, e('i', {className: "fab fa-python"})),
     e('li', null, e('i', {className: "fab fa-react"})),
@@ -109,45 +108,74 @@ function threeMTech() {
     e('li', null, e('i', {className: "fab fa-docker"})),
     e('li', null, e('i', {className: "fab fab fa-css3-alt"})),
     e('li', null, e('i', {className: "fab fa-html5"}))
-  ),
-  e('br', null))
+  ))
 )};
 
-function threeMDetails() {
+function mmmDetails() {
   return(
     e('div', null,
-      e('h5', null, 'I worked in the Software Research Lab. It was an awesome learning experience.' +
-      ' We were able to solve an interesting computer vision problem that involved finding the distance between two objects in an image (provided we made certain assumptions).'),
-      e('br', null),
-      e('h5', null, 'In addition to solving this problem locally, we used AWS to automate solving this vision problem.'),
-      e('br', null),
-      threeMTech(),
+      mmmTech(),
+      e('ul', null,
+        e('li', null, 'I worked in the Software Research Lab. It was an awesome learning experience.'),
+        e('li', null, 'We were able to solve an interesting computer vision problem that involved finding the distance between two objects in an image (provided we made certain assumptions).'),
+        e('li', null, 'In addition to solving this problem locally, we used AWS to automate solving this vision problem by linking a Lambda function with a custom IOS application.')
+      ),
       e('br', null),
       e('h5', {display: "inline"}, 'They liked me enough to invite me back. See you in 2020, ', attention('Artificial Intelligence Lab!', highlightColor))
     )
 )};
 
+const mmm = {
+  title: 'R&D Data Scientist',
+  location: '3M - Corporate Research Systems Lab',
+  image: 'images/jobs/3m.png',
+  link: 'https://www.3m.com/3M/en_US/company-us/about-3m/research-development/',
+  details: mmmDetails()
+};
+
 // Custom RPI details
 function rpiDetails() {
   return(
     e('div', null,
-      e('h5', null, 'I did regular TA things here. Grading homework, quizzes, and exams. Hosting office hours to give students extra help. I made all of my own quizzes, which is pretty cool.'),
+      e('ul', null,
+        e('li', null, 'I did regular TA things here: grading homework, quizzes, and exams.'),
+        e('li', null, 'I lead recitations for groups of 30+ students where we solved problems and I answered questions.'),
+        e('li', null, 'Office hours were held weekly for students who required extra assistance.')
+      ),
       e('br', null),
-      e('h5', {display: "inline"}, 'My average overall student approval rating is ', attention('4.55/5.0!', highlightColor), e('h6', null, ' I\'m pretty proud of this!'))
+      e('h5', {display: "inline"}, 'I acheived an overall student approval rating of ', attention('4.55/5.0', highlightColor), '! I am pretty proud of this.')
     )
 )};
+
+const rpi = {
+  title: 'Teaching Assistant',
+  location: 'Rensselaer Polytechnic Institute',
+  image: 'images/jobs/rpi.png',
+  link: 'https://science.rpi.edu/mathematical-sciences',
+  details: rpiDetails()
+};
 
 // Custom Logistic Regression details
 function logRegDetails() {
   return(
     e('div', null,
-      e('h5', {display: "inline"}, 'This was the final project for my graduate level theoretical optimization course. If you\'d like to view the full project, click ', e('a', {href: "docs/OptimizationProject.pdf"}, ' here.')),
+      e('ul', null,
+        e('li', null, 'This was the final project for my graduate level theoretical optimization course.'),
+        e('li', null, 'All machine learning algorithms are solving some sort of optimization problem; in this particular project we wanted to create our own classification algorithm using a logistic regression model.'),
+        e('li', null, 'It was pretty amazing to see this thing work and gain a better understanding of the inner workings of \'machine learning!\'')
+      ),
       e('br', null),
-      e('h5', null, 'All machine learning algorithms are solving some sort of optimization problem; in this particular project we wanted to create our own classification algorithm using a logistic regression model.'),
-      e('br', null),
-      e('h5', null, 'It was pretty amazing to see this thing work and gain a better understanding of the inner workings of \'machine learning!\'')
+      e('h5', {display: "inline"}, 'If you\'d like to view the full project, click ', e('a', {href: "docs/OptimizationProject.pdf"}, ' here.'))
     )
 )};
+
+const logreg = {
+  title: 'Logistic Regression Classification',
+  location: 'RPI - MATH 6600',
+  image: 'images/other/math.png',
+  link: 'docs/OptimizationProject.pdf',
+  details: logRegDetails()
+}
 
 // Function for rendering specifics about jobs
 function job(title, location, image_path, link, details) {
@@ -161,25 +189,144 @@ function job(title, location, image_path, link, details) {
   )
 };
 
-// Image interest grid
+//
+// INTEREST SECTION!!!!
+//
+
 // This is gross, I am so sorry :'(
+const imageList = [
+  {
+    name: 'Marvel',
+    src: "images/shows/marvel.jpg",
+    text: 'I <3 Iron Man',
+    tag: 'Movies'
+  },
+  {
+    name: 'Joyner Lucas',
+    src: "images/music/joyner.jpg",
+    text: 'Unparalleled flow',
+    tag: 'Music'
+  },
+  {
+    name: 'Boxing',
+    src: "images/other/boxing.png",
+    text: 'Chess, but with your body',
+    tag: 'Other'
+  },
+  {
+    name: 'The Office',
+    src: "images/shows/office.jpg",
+    text: 'Jim is my spirit animal',
+    tag: 'Shows'
+  },
+  {
+    name: 'Quinn XCII',
+    src: "images/music/quinn.jpg",
+    text: 'On a beach, in a car, wherever',
+    tag: 'Music'
+  },
+  {
+    name: 'Stack Exchange',
+    src: "images/other/stack.png",
+    text: 'Omnipresent in my life',
+    tag: 'Other'
+  },
+  {
+    name: 'Lil\' Dicky',
+    src: "images/music/lildicky.jpg",
+    text: 'Hopefully you know something other than \'Freaky Friday\'',
+    tag: 'Music'
+  },
+  {
+    name: 'John Wick',
+    src: "images/shows/johnwick.jpg",
+    text: 'Don\'t steal cars, kids',
+    tag: 'Movies'
+  },
+  {
+    name: 'GRiZ',
+    src: "images/music/griz.jpg",
+    text: 'Dude puts on AMAZING shows',
+    tag: 'Music'
+  },
+  {
+    name: 'AlphaGo',
+    src: "images/other/alphago.png",
+    text: 'Such an impressive feat',
+    tag: 'Other'
+  },
+  {
+    name: 'Michael Buble',
+    src: "images/music/buble.jpg",
+    text: 'Frank Sinatra?',
+    tag: 'Music'
+  },
+  {
+    name: 'Nature',
+    src: "images/other/nature.jpeg",
+    text: 'Nature is my first love',
+    tag: 'Other'
+  },
+  {
+    name: 'Stranger Things',
+    src: "images/shows/strangerthings.jpg",
+    text: 'Binged this whole show in two weeks',
+    tag: 'Shows'
+  },
+  {
+    name: 'Food',
+    src: "images/other/food.jpeg",
+    text: 'FEED ME',
+    tag: 'Other'
+  },
+  {
+    name: 'Ed Sheeran',
+    src: "images/music/ed.jpg",
+    text: 'Lullabies and bangers',
+    tag: 'Music'
+  },
+  {
+    name: 'Love, Death, and Robots',
+    src: "images/shows/ldr.jpg",
+    text: 'The Secret War',
+    tag: 'Shows'
+  }
+];
+
+function interestElement(listItem, i) {
+  // listItem must have the following attributes: 'name', 'src', 'text', 'tag'
+  // i is an int
+  return(
+    e('div', {className: "image-container"},
+    e('img', {src: listItem[i].src, alt: listItem[i].name}),
+    e('div', {className: "image-text"}, listItem[i].text))
+  )
+};
+
+// If you want to add more, just append items to the 'imageList' and then place them in here
 const interestGrid = e('div', {className: "row"},
-  e('div', {className: "column"}, e('div', {className: "image-container"}, e('img', {src: "images/shows/marvel.jpg", alt: 'Marvel'}), e('div', {className: "image-text"}, 'I <3 Iron Man')),
-    e('div', {className: "image-container"}, e('img', {src: "images/music/joyner.jpg", alt: 'Joyner Lucas'}), e('div', {className: "image-text"}, 'Unparalleled flow')),
-    e('div', {className: "image-container"}, e('img', {src: "images/other/boxing.png", alt: 'Boxing'}), e('div', {className: "image-text"}, 'Chess, but with your body')),
-    e('div', {className: "image-container"}, e('img', {src: "images/shows/office.jpg", alt: 'The Office'}), e('div', {className: "image-text"}, 'Jim is my spirit animal')),
-    e('div', {className: "image-container"}, e('img', {src: "images/music/quinn.jpg", alt: 'Quinn XCII'}), e('div', {className: "image-text"}, 'On a beach, in a car, wherever')),
-    e('div', {className: "image-container"}, e('img', {src: "images/other/stack.png", alt: 'Stack Exchange'}), e('div', {className: "image-text"}, 'Omnipresent in my life'))),
-  e('div', {className: "column"}, e('div', {className: "image-container"}, e('img', {src: "images/music/lildicky.jpg", alt: 'Lil\' Dicky'}), e('div', {className: "image-text"}, 'Hopefully you know something other than \'Freaky Friday\'')),
-    e('div', {className: "image-container"}, e('img', {src: "images/shows/johnwick.jpg", alt: 'John Wick'}), e('div', {className: "image-text"}, 'Don\'t steal cars, kids')),
-    e('div', {className: "image-container"}, e('img', {src: "images/music/griz.jpg", alt: 'GRiZ'}), e('div', {className: "image-text"}, 'Dude puts on AMAZING shows')),
-    e('div', {className: "image-container"}, e('img', {src: "images/other/alphago.png", alt: 'AlphaGo'}), e('div', {className: "image-text"}, 'Such an impressive feat')),
-    e('div', {className: "image-container"}, e('img', {src: "images/music/buble.jpg", alt: 'Michael Buble'}), e('div', {className: "image-text"}, 'Serenade me'))),
-  e('div', {className: "column"}, e('div', {className: "image-container"}, e('img', {src: "images/other/nature.jpeg", alt: 'Nature'}), e('div', {className: "image-text"}, 'Nature is my first love')),
-    e('div', {className: "image-container"}, e('img', {src: "images/shows/strangerthings.jpg", alt: 'Stranger Things'}), e('div', {className: "image-text"}, 'Binged this whole show in two weeks')),
-    e('div', {className: "image-container"}, e('img', {src: "images/other/food.jpeg", alt: 'Food'}), e('div', {className: "image-text"}, 'FEED ME')),
-    e('div', {className: "image-container"}, e('img', {src: "images/music/ed.jpg", alt: 'Ed Sheeran'}), e('div', {className: "image-text"}, 'Lullabies and bangers')),
-    e('div', {className: "image-container"}, e('img', {src: "images/shows/ldr.jpg", alt: 'LDR'}), e('div', {className: "image-text"}, 'The Secret War')))
+  e('div', {className: "column"},
+    interestElement(imageList, 0),
+    interestElement(imageList, 1),
+    interestElement(imageList, 2),
+    interestElement(imageList, 3),
+    interestElement(imageList, 4),
+    interestElement(imageList, 5)
+  ),
+  e('div', {className: "column"},
+    interestElement(imageList, 6),
+    interestElement(imageList, 7),
+    interestElement(imageList, 8),
+    interestElement(imageList, 9),
+    interestElement(imageList, 10),
+  ),
+  e('div', {className: "column"},
+    interestElement(imageList, 11),
+    interestElement(imageList, 12),
+    interestElement(imageList, 13),
+    interestElement(imageList, 14),
+    interestElement(imageList, 15),
+  )
 );
 
 // Create about me
@@ -210,12 +357,11 @@ ReactDOM.render(
   e(Parent, {title: 'Things I\'ve done',
   info: [e('h5', null, 'If you\'d like an objectively boring version of this information, click ', e('a', {href: "docs/Mancino-Ball_Resume.pdf"}, 'here.'), e('br', null)),
     e('br', null),
-    job('R&D Data Scientist', '3M - Corporate Research Systems Lab', 'images/jobs/3m.png', 'https://www.3m.com/3M/en_US/company-us/about-3m/research-development/', threeMDetails()),
+    job(mmm.title, mmm.location, mmm.image, mmm.link, mmm.details),
     e('br', null),
-    job('Teaching Assistant', 'Rensselaer Polytechnic Institute', 'images/jobs/rpi.png', 'https://science.rpi.edu/mathematical-sciences', rpiDetails()),
+    job(rpi.title, rpi.location, rpi.image, rpi.link, rpi.details),
     e('br', null),
-    job('Logistic Regression Classification', 'MATH 6600', 'images/other/math.png', "docs/OptimizationProject.pdf", logRegDetails()),
-    e('br', null)]}),
+    job(logreg.title, logreg.location, logreg.image, logreg.link, logreg.details)]}),
   document.getElementById('past')
 );
 

@@ -173,6 +173,23 @@ footer a:hover {
 }
 
 #past ul {
+  justify-content: left;
+  display: block;
+  list-style: none;
+  margin: 1%;
+}
+
+#past li {
+  text-align: left;
+  font-size: 0.85em;
+  padding: 1%;
+}
+
+#past .tech {
+  display: inline;
+}
+
+#past .tech ul {
   justify-content: center;
   display: flex;
   list-style: none;
@@ -180,11 +197,10 @@ footer a:hover {
   padding: 0;
 }
 
-#past li {
+#past .tech li {
   text-align: center;
-  margin: 2%;
-  padding: 2%;
-  font-size: 1.5em;
+  font-size: 1em;
+  margin: 1.5%;
 }
 
 #past a {
