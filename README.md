@@ -1,6 +1,10 @@
 # I updated my website!
 ---
 
+**Go visit it:** [https://gmancino.dev](https://gmancino.dev)
+
+Here is my old site: [https://gmancino.dev/old-website/index.html](https://gmancino.dev/old-website/index.html), in case you want to see the changes!
+
 ## What's new
 
 I made the switch from just using `CSS` and `HTML` to incorporating `Javascript` with **React**. This allowed me to consolidate the html code (which I think is ugly) and focus more on creating things with React (which is also still ugly, but not as bad in my opinion).
@@ -190,3 +194,102 @@ ReactDOM.render(
 ```
 
 Basically, the above class allows us to define class specific functions, render different things based on parameters, and interact with the user (that's my very non-technical understanding)
+
+## Notes for changing things
+
+#### Experience
+
+Let's say you want to add a new work experience. In the `js/Main.js` file create the following code:
+
+```
+...
+
+// Did you use any technology?
+function yourTech() {
+  return(
+  e('div', {className: "tech"},
+  e('ul', null,
+    e('li', null, e('i', {className: "FONTAWESOME_CODE_1"})),
+    e('li', null, e('i', {className: "FONTAWESOME_CODE_2"})),
+    e('li', null, e('i', {className: "FONTAWESOME_CODE_3"}))
+  ))
+)};
+
+// Add details here
+function jobDetails() {
+  return(
+    e('div', null,
+      yourTech(),
+      e('ul', null,
+        e('li', null, 'Here's something I did'),
+        e('li', null, 'Another fun fact.'),
+      ),
+      e('br', null),
+      e('h5', null, 'Any footnotes?')
+    )
+)};
+
+// Add list with important job details
+const job = {
+  title: 'YOUR_TITLE',
+  location: 'JOB_LOCATION',
+  image: 'images/jobs/JOB_IMAGE',
+  link: 'URL_LINK_TO_JOB'
+  details: jobDetails()
+}
+
+...
+
+// Add this to the ReactDOM.render() 'past' piece
+...
+job(job.title, job.location, job.image, job.link, job.details),
+e('br', null),
+...
+```
+
+And _boom_, you've added something else you've done. If you want to add \'tech\' you can change the CSS animation in the `layout.css` file as follows
+
+```
+...
+
+/* Add hover animation for new icon */
+#past .FONT_AWESOME_ICON {
+  border: 3px solid var(--header-bg-color);
+  border-radius: 50%;
+  padding: 10px;
+  transition: color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+#past .FONT_AWESOME_ICON:hover {
+  color: <HEX_COLOR_CODE>;
+  border: 3px solid <OTHER_HEX_COLOR_CODE>
+}
+
+...
+```
+
+#### Likes
+
+If you want to add something to the likes section, look for the `imageList` constant in the `js/Main.js` file and append the following:
+
+```
+// Find 'imageList'
+...
+
+{
+  name: 'NEW_LIKE',
+  src: 'images/PATH_TO_IMAGES',
+  text: 'CLEVER_CAPTION_RELATED_TO_PICTURE',
+  tag: 'TAG_FOR_THIS_PICTURE'
+}
+
+...
+
+// Find 'interestGrid' and append the image where you want it with the following command
+
+interestElement(imageList, NEW_ENTRY_LOCATION)
+```
+
+Keep in mind, Javascript starts counting at 0. Currently there are 0-23 entries in the `imageList`
