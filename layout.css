@@ -306,6 +306,36 @@ footer a:hover {
   border: 3px solid #E44D26;
 }
 
+/* Brain logo */
+#past .fa-brain {
+  border: 3px solid var(--header-bg-color);
+  border-radius: 50%;
+  padding: 10px;
+  transition: color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+#past .fa-brain:hover {
+  color: #F97CFF;
+  border: 3px solid #FFFFFF;
+}
+
+/* Laptop code */
+#past .fa-laptop-code {
+  border: 3px solid var(--header-bg-color);
+  border-radius: 50%;
+  padding: 10px;
+  transition: color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+#past .fa-laptop-code:hover {
+  color: #46BCFB;
+  border: 3px solid var(--black);
+}
+
 /* Add title section */
 #header {
   font-family: "Fira Sans";

@@ -103,11 +103,8 @@ function mmmTech() {
   e('div', {className: "tech"},
   e('ul', null,
     e('li', null, e('i', {className: "fab fa-python"})),
-    e('li', null, e('i', {className: "fab fa-react"})),
     e('li', null, e('i', {className: "fab fa-aws"})),
-    e('li', null, e('i', {className: "fab fa-docker"})),
-    e('li', null, e('i', {className: "fab fab fa-css3-alt"})),
-    e('li', null, e('i', {className: "fab fa-html5"}))
+    e('li', null, e('i', {className: "fab fa-docker"}))
   ))
 )};
 
@@ -133,32 +130,51 @@ const mmm = {
   details: mmmDetails()
 };
 
-// Custom RPI details
-function rpiDetails() {
+// Custom Website details
+function webTech() {
+  return(
+  e('div', {className: "tech"},
+  e('ul', null,
+    e('li', null, e('i', {className: "fab fa-react"})),
+    e('li', null, e('i', {className: "fab fab fa-css3-alt"})),
+    e('li', null, e('i', {className: "fab fa-html5"}))
+  ))
+)};
+
+function websiteDetails() {
   return(
     e('div', null,
+      webTech(),
       e('ul', null,
-        e('li', null, 'I did regular TA things here: grading homework, quizzes, and exams.'),
-        e('li', null, 'I lead recitations for groups of 30+ students where we solved problems and I answered questions.'),
-        e('li', null, 'Office hours were held weekly for students who required extra assistance.')
-      ),
-      e('br', null),
-      e('h5', {display: "inline"}, 'I acheived an overall student approval rating of ', attention('4.55/5.0', highlightColor), '! I am pretty proud of this.')
+        e('li', null, 'I wanted to build my own website using React! And here we are.'),
+        e('li', null, 'My old website can be found ', e('a', {href: "https://gmancino.dev/old-website/index.html"}, 'here.'), ' This was before I knew any Javascript.'),
+        e('li', null, 'If you\'d like to view the source code, check out my ', e('a', {href: "https://github.com/gmancino/gmancino.github.io"}, 'github'),' page.')
+      )
     )
 )};
 
-const rpi = {
-  title: 'Teaching Assistant',
-  location: 'Rensselaer Polytechnic Institute',
-  image: 'images/jobs/rpi.png',
-  link: 'https://science.rpi.edu/mathematical-sciences',
-  details: rpiDetails()
+const web = {
+  title: 'Front End Devleopment',
+  location: 'Personal Project',
+  image: 'images/uplogo.png',
+  link: 'https://gmancino.dev',
+  details: websiteDetails()
 };
 
 // Custom Logistic Regression details
+function logregTech() {
+  return(
+  e('div', {className: "tech"},
+  e('ul', null,
+    e('li', null, e('i', {className: "fas fa-brain"})),
+    e('li', null, e('i', {className: "fas fa-laptop-code"}))
+  ))
+)};
+
 function logRegDetails() {
   return(
     e('div', null,
+    logregTech(),
       e('ul', null,
         e('li', null, 'This was the final project for my graduate level theoretical optimization course.'),
         e('li', null, 'All machine learning algorithms are solving some sort of optimization problem; in this particular project we wanted to create our own classification algorithm using a logistic regression model.'),
@@ -359,7 +375,7 @@ ReactDOM.render(
     e('br', null),
     job(mmm.title, mmm.location, mmm.image, mmm.link, mmm.details),
     e('br', null),
-    job(rpi.title, rpi.location, rpi.image, rpi.link, rpi.details),
+    job(web.title, web.location, web.image, web.link, web.details),
     e('br', null),
     job(logreg.title, logreg.location, logreg.image, logreg.link, logreg.details)]}),
   document.getElementById('past')
