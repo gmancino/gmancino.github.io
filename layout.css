@@ -388,6 +388,26 @@ footer a:hover {
   display: inline;
 }
 
+#current .papers ul {
+  list-style: none;
+}
+
+#current .papers li {
+  font-size: 0.8em;
+}
+
+#current .papers a {
+  color: inherit;
+  text-decoration: none;
+  transition: color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+#current .papers a:hover {
+  color: var(--highlight-color);
+}
+
 /* Add interests section */
 .row {
   display: flex;

@@ -95,7 +95,9 @@ class Parent extends React.Component {
   }
 };
 
-// Create functions for rendering different things in body of page
+//
+// JOB SECTION!!
+//
 
 // Custom 3M technology used
 function mmmTech() {
@@ -205,6 +207,19 @@ function job(title, location, image_path, link, details) {
   )
 };
 
+// Render things I've done
+ReactDOM.render(
+  e(Parent, {title: 'Things I\'ve done',
+  info: [e('h5', null, 'If you\'d like an objectively boring version of this information, click ', e('a', {href: "docs/Mancino-Ball_Resume.pdf"}, 'here.'), e('br', null)),
+    e('br', null),
+    job(mmm.title, mmm.location, mmm.image, mmm.link, mmm.details),
+    e('br', null),
+    job(web.title, web.location, web.image, web.link, web.details),
+    e('br', null),
+    job(logreg.title, logreg.location, logreg.image, logreg.link, logreg.details)]}),
+  document.getElementById('past')
+);
+
 //
 // INTEREST SECTION!!!!
 //
@@ -306,6 +321,54 @@ const imageList = [
     src: "images/shows/ldr.jpg",
     text: 'The Secret War',
     tag: 'Shows'
+  },
+  {
+    name: 'Halsey',
+    src: "images/music/halsey.png",
+    text: 'Vibe with me',
+    tag: 'Music'
+  },
+  {
+    name: 'Billie Eilish',
+    src: "images/music/billie.jpg",
+    text: 'Straight fire',
+    tag: 'Music'
+  },
+  {
+    name: 'Sushi',
+    src: "images/other/sushi.jpg",
+    text: 'Sushi is my fav',
+    tag: 'Other'
+  },
+  {
+    name: 'Colorado',
+    src: "images/other/colorado.jpg",
+    text: 'Colorado is magical in everyway',
+    tag: 'Other'
+  },
+  {
+    name: 'Travel',
+    src: "images/other/italy.jpg",
+    text: 'Can\'t wait to return to Europe!',
+    tag: 'Other'
+  },
+  {
+    name: 'Rock Climbing',
+    src: "images/other/climbing.jpg",
+    text: 'Not very good, but I sure do like it!',
+    tag: 'Other'
+  },
+  {
+    name: 'Vanessa Kirby',
+    src: "images/shows/kirby.jpg",
+    text: 'Absolute badass!',
+    tag: 'Movies'
+  },
+  {
+    name: 'Joi Ito Philosophies',
+    src: "images/other/ito.jpg",
+    text: 'I strive to live by these philosophies',
+    tag: 'Other'
   }
 ];
 
@@ -324,61 +387,74 @@ const interestGrid = e('div', {className: "row"},
   e('div', {className: "column"},
     interestElement(imageList, 0),
     interestElement(imageList, 1),
+    interestElement(imageList, 18),
     interestElement(imageList, 2),
     interestElement(imageList, 3),
-    interestElement(imageList, 4),
-    interestElement(imageList, 5)
+    interestElement(imageList, 5),
+    interestElement(imageList, 19),
+    interestElement(imageList, 10)
   ),
   e('div', {className: "column"},
     interestElement(imageList, 6),
+    interestElement(imageList, 17),
     interestElement(imageList, 7),
+    interestElement(imageList, 21),
     interestElement(imageList, 8),
-    interestElement(imageList, 9),
-    interestElement(imageList, 10),
+    interestElement(imageList, 14),
+    interestElement(imageList, 9)
   ),
   e('div', {className: "column"},
+    interestElement(imageList, 22),
     interestElement(imageList, 11),
     interestElement(imageList, 12),
+    interestElement(imageList, 23),
+    interestElement(imageList, 4),
     interestElement(imageList, 13),
-    interestElement(imageList, 14),
     interestElement(imageList, 15),
+    interestElement(imageList, 16),
+    interestElement(imageList, 20)
   )
 );
 
-// Create about me
-const aboutInfo = e('h5', null, 'Hello! My name is Gabriel, but you can call me Gabe.' +
+//
+// About me
+//
+const aboutInfo = e('div', null,
+  e('h5', null, 'Hello! My name is Gabriel, but you can call me Gabe.' +
  ' I currently study mathematics at Rensselaer Polytechnic Institute in Troy, New York.' +
- ' My research interests lie in the applications of optimization and probability theory to solve machine learning problems.',
- e('br', null));
+ ' My research interests lie in the applications of optimization and probability theory to solve machine learning problems.'));
 
 // Render about me
 ReactDOM.render(
   e(Parent, {title: 'Greetings', info: [aboutInfo, e('br', null)]}),
-  document.getElementById('about')
+  document.getElementById('intro')
 );
 
+//
 // Render current endeavors
+//
+
+function whatIDo() {
+  return(
+  e('div', null,
+    e('h5', null, 'Click around in the box below to see if you can find the ', attention('smallest', highlightColor), ' objective value.'),
+    e(Func, null),
+    e('h5', null, 'Pretty hard right? This is called ', attention('derivative-free optimization', highlightColor),
+    ' and I think it is very interesting! This is what I study at Rensselaer Polytechnic Institute.'),
+    e('h5', null, 'Papers I\'m reading/have read recently:'),
+    e('div', {className: "papers"},
+      e('ul', null,
+        e('li', null, e('a', {href: "http://www.ressources-actuarielles.net/EXT/ISFA/1226.nsf/0/f84f7ac703bf5862c12576d8002f5259/$FILE/Jones98.pdf"}, 'Efficient Global Optimization of Expensive Black-Box Functions'), ' by Jones et. al.'),
+        e('li', null, e('a', {href: "https://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf"}, 'Practical Bayesian Optimization of Machine Learning Algorithms'), ' by Snoek et. al.')
+      )
+    )
+  )
+)};
+
 ReactDOM.render(
   e(Parent, {title: 'Things I\'m doing',
-  info: [e('h5', null, 'Click around in the box below to see if you can find the ', attention('smallest', highlightColor), ' objective value.'),
-    e(Func, null),
-    e('br', null),
-    e('h5', null, 'Pretty hard right? This is called ', attention('derivative-free optimization', highlightColor),
-    ' and I think it is very interesting! This is what I study at Rensselaer Polytechnic Institute.')]}),
+  info: whatIDo()}),
   document.getElementById('current')
-);
-
-// Render things I've done
-ReactDOM.render(
-  e(Parent, {title: 'Things I\'ve done',
-  info: [e('h5', null, 'If you\'d like an objectively boring version of this information, click ', e('a', {href: "docs/Mancino-Ball_Resume.pdf"}, 'here.'), e('br', null)),
-    e('br', null),
-    job(mmm.title, mmm.location, mmm.image, mmm.link, mmm.details),
-    e('br', null),
-    job(web.title, web.location, web.image, web.link, web.details),
-    e('br', null),
-    job(logreg.title, logreg.location, logreg.image, logreg.link, logreg.details)]}),
-  document.getElementById('past')
 );
 
 // Render interests
