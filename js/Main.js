@@ -80,7 +80,7 @@ class Parent extends React.Component {
     // Create different states
     var hidden = {display: this.state.isHidden ? "block" : "none"};
 
-    var vis = {display: this.state.isHidden ? "none" : "block"};
+    var vis = {className: "test", display: this.state.isHidden ? "none" : "block"};
 
     // Return button with options
     return (

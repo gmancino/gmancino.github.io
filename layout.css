@@ -452,3 +452,19 @@ footer a:hover {
 .image-container:hover .image-text {
   opacity: 1;
 }
+
+h4 {
+  animation: 0.75s fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
