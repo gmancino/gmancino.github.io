@@ -437,15 +437,12 @@ ReactDOM.render(
 function whatIDo() {
   return(
   e('div', null,
-    e('h5', null, 'Click around in the box below to see if you can find the ', attention('smallest', highlightColor), ' objective value.'),
-    e(Func, null),
-    e('h5', null, 'Pretty hard right? This is called ', attention('derivative-free optimization', highlightColor),
-    ' and I think it is very interesting! This is what I study at Rensselaer Polytechnic Institute.'),
+    e('h5', null, 'Distributed optimization frameworks that are able to fully utilize edge computing have gained interest in the last few years. I am interested in providing theoretical convergence guarantees for algorithms ran on such frameworks.'),
     e('h5', null, 'Papers I\'m reading/have read recently:'),
     e('div', {className: "papers"},
       e('ul', null,
-        e('li', null, e('a', {href: "http://www.ressources-actuarielles.net/EXT/ISFA/1226.nsf/0/f84f7ac703bf5862c12576d8002f5259/$FILE/Jones98.pdf"}, 'Efficient Global Optimization of Expensive Black-Box Functions'), ' by Jones et. al.'),
-        e('li', null, e('a', {href: "https://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf"}, 'Practical Bayesian Optimization of Machine Learning Algorithms'), ' by Snoek et. al.')
+        e('li', null, e('a', {href: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4749425"}, 'Distributed Subgradient Methods for Multi-Agent Optimization'), ' by Nedic\u0301 et. al.'),
+        e('li', null, e('a', {href: "https://arxiv.org/abs/1907.02189"}, 'On the Convergence of FedAvg on Non-IID Data'), ' by Li et. al.')
       )
     )
   )
