@@ -343,7 +343,7 @@ const imageList = [
   {
     name: 'Colorado',
     src: "images/other/colorado.jpg",
-    text: 'Colorado is magical in everyway',
+    text: 'Colorado is magical in every way',
     tag: 'Other'
   },
   {
