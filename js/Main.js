@@ -441,6 +441,7 @@ function whatIDo() {
     e('h5', null, 'Papers I\'m reading/have read recently:'),
     e('div', {className: "papers"},
       e('ul', null,
+        e('li', null, e('a', {href: "https://epubs.siam.org/doi/abs/10.1137/14096668X"}, 'EXTRA: An Exact First-Order Algorithm for Decentralized Consensus Optimization'), ' by Shi et. al.'),
         e('li', null, e('a', {href: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4749425"}, 'Distributed Subgradient Methods for Multi-Agent Optimization'), ' by Nedic\u0301 et. al.'),
         e('li', null, e('a', {href: "https://arxiv.org/abs/1907.02189"}, 'On the Convergence of FedAvg on Non-IID Data'), ' by Li et. al.')
       )
