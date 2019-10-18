@@ -163,13 +163,16 @@ footer a:hover {
   float: right;
   display: block;
   width: 5vw;
-  transition: width;
+  border: 5px solid var(--header-color);
+  border-radius: 5px;
+  transition: border;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
 
 #past img:hover {
-  width: 6vw;
+  border: 5px solid var(--super--highlight);
+  border-radius: 5px;
 }
 
 #past ul {
