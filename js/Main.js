@@ -115,12 +115,12 @@ function mmmDetails() {
     e('div', null,
       mmmTech(),
       e('ul', null,
-        e('li', null, 'I worked in the Software Research Lab. It was an awesome learning experience.'),
-        e('li', null, 'We were able to solve an interesting computer vision problem that involved finding the distance between two objects in an image (provided we made certain assumptions).'),
-        e('li', null, 'In addition to solving this problem locally, we used AWS to automate solving this vision problem by linking a Lambda function with a custom IOS application.')
-      ),
-      e('br', null),
-      e('h5', {display: "inline"}, 'They liked me enough to invite me back. See you in 2020, ', attention('Artificial Intelligence Lab!', highlightColor))
+        e('li', null, 'I worked in the Software Research Lab (2019) and the Artificial Intelligence Lab (2020).'),
+        e('li', null, 'In 2020, I designed a custom neural network in PyTorch to solve a predictive regression problem that aided chemists in evaluating compounds.'),
+        e('li', null, 'I also worked on solving an inverse problem to generate \"good\" combinations of compounds to test next.'),
+        e('li', null, 'In 2019, I worked on solving an interesting computer vision problem that involved finding the distance between two objects in an image.'),
+        e('li', null, 'In addition to solving this problem locally, I used AWS to automate solving this vision problem by linking a Lambda function with a custom IOS application.')
+      )
     )
 )};
 
@@ -438,14 +438,8 @@ function whatIDo() {
   return(
   e('div', null,
     e('h5', null, 'Distributed optimization frameworks that are able to fully utilize edge computing have gained interest in the last few years. I am interested in providing theoretical convergence guarantees for algorithms ran on such frameworks.'),
-    e('h5', null, 'Papers I\'m reading/have read recently:'),
-    e('div', {className: "papers"},
-      e('ul', null,
-        e('li', null, e('a', {href: "https://epubs.siam.org/doi/abs/10.1137/14096668X"}, 'EXTRA: An Exact First-Order Algorithm for Decentralized Consensus Optimization'), ' by Shi et. al.'),
-        e('li', null, e('a', {href: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4749425"}, 'Distributed Subgradient Methods for Multi-Agent Optimization'), ' by Nedic\u0301 et. al.'),
-        e('li', null, e('a', {href: "https://arxiv.org/abs/1907.02189"}, 'On the Convergence of FedAvg on Non-IID Data'), ' by Li et. al.')
-      )
-    )
+    e('h5', null, 'This work is currently funded by IBM through the ', e('a', {href: "https://www.research.ibm.com/artificial-intelligence/horizons-network/"}, 'AI Horizons Network.')),
+    e('h5', null, 'You can check out my profile ', e('a', {href: "https://airc.rpi.edu/people/staff/gabriel-mancino-ball"}, 'here.'))
   )
 )};
 
