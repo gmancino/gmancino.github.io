@@ -355,7 +355,7 @@ const imageList = [
   {
     name: 'Tattoo',
     src: "images/other/tats.jpg",
-    text: 'Looking to tell a story through pictures',
+    text: 'Looking to tell a story through ink',
     tag: 'Other'
   },
   {
