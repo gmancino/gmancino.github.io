@@ -48,7 +48,7 @@ ReactDOM.render(
 const footer = e(
   'footer',
   null,
-  'Updated on 08-12-2019  ',
+  'Updated on 08-11-2020  ',
   e('img', {src: user.logo, alt: "Logo", align: "top", width: "1.5%"}),
   '  Hosted on GitHub',
   e('br', null),
