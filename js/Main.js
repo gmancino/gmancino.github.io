@@ -295,7 +295,7 @@ const imageList = [
   {
     name: 'Ed Sheeran',
     src: "images/music/ed.jpg",
-    text: 'I like that I can listen to this at a party or with my family',
+    text: 'Can rock at a party or with my grandma',
     tag: 'Music'
   },
   {
