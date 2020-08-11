@@ -229,7 +229,7 @@ const imageList = [
   {
     name: 'Marvel',
     src: "images/shows/marvel.jpg",
-    text: 'I <3 Iron Man',
+    text: 'Fanboy, 100%',
     tag: 'Movies'
   },
   {
@@ -241,38 +241,26 @@ const imageList = [
   {
     name: 'Boxing',
     src: "images/other/boxing.png",
-    text: 'Chess, but with your body',
+    text: 'Human chess',
     tag: 'Other'
-  },
-  {
-    name: 'The Office',
-    src: "images/shows/office.jpg",
-    text: 'Jim is my spirit animal',
-    tag: 'Shows'
   },
   {
     name: 'Quinn XCII',
     src: "images/music/quinn.jpg",
-    text: 'On a beach, in a car, wherever',
+    text: 'I feel like he just gets better and better',
     tag: 'Music'
   },
   {
     name: 'Stack Exchange',
     src: "images/other/stack.png",
-    text: 'Omnipresent in my life',
+    text: 'Obligatory',
     tag: 'Other'
   },
   {
     name: 'Lil\' Dicky',
     src: "images/music/lildicky.jpg",
-    text: 'Hopefully you know something other than \'Freaky Friday\'',
+    text: 'It\'s cool to watch the journey people take',
     tag: 'Music'
-  },
-  {
-    name: 'John Wick',
-    src: "images/shows/johnwick.jpg",
-    text: 'Don\'t steal cars, kids',
-    tag: 'Movies'
   },
   {
     name: 'GRiZ',
@@ -283,19 +271,13 @@ const imageList = [
   {
     name: 'AlphaGo',
     src: "images/other/alphago.png",
-    text: 'Such an impressive feat',
+    text: 'Move 37',
     tag: 'Other'
-  },
-  {
-    name: 'Michael Buble',
-    src: "images/music/buble.jpg",
-    text: 'Frank Sinatra?',
-    tag: 'Music'
   },
   {
     name: 'Nature',
     src: "images/other/nature.jpeg",
-    text: 'Nature is my first love',
+    text: 'I love beautiful things in nature',
     tag: 'Other'
   },
   {
@@ -307,13 +289,13 @@ const imageList = [
   {
     name: 'Food',
     src: "images/other/food.jpeg",
-    text: 'FEED ME',
+    text: 'Hanger is my kryptonite',
     tag: 'Other'
   },
   {
     name: 'Ed Sheeran',
     src: "images/music/ed.jpg",
-    text: 'Lullabies and bangers',
+    text: 'I like that I can listen to this at a party or with my family',
     tag: 'Music'
   },
   {
@@ -323,27 +305,15 @@ const imageList = [
     tag: 'Shows'
   },
   {
-    name: 'Halsey',
-    src: "images/music/halsey.png",
-    text: 'Vibe with me',
-    tag: 'Music'
-  },
-  {
-    name: 'Billie Eilish',
-    src: "images/music/billie.jpg",
-    text: 'Straight fire',
-    tag: 'Music'
-  },
-  {
     name: 'Sushi',
     src: "images/other/sushi.jpg",
-    text: 'Sushi is my fav',
+    text: 'Sushi reigns supreme',
     tag: 'Other'
   },
   {
     name: 'Colorado',
     src: "images/other/colorado.jpg",
-    text: 'Colorado is magical in every way',
+    text: 'Love a good hike!',
     tag: 'Other'
   },
   {
@@ -355,7 +325,7 @@ const imageList = [
   {
     name: 'Rock Climbing',
     src: "images/other/climbing.jpg",
-    text: 'Not very good, but I sure do like it!',
+    text: 'Crimps are NOT my friend...',
     tag: 'Other'
   },
   {
@@ -368,6 +338,30 @@ const imageList = [
     name: 'Joi Ito Philosophies',
     src: "images/other/ito.jpg",
     text: 'I strive to live by these philosophies',
+    tag: 'Other'
+  },
+  {
+    name: 'Lake Superior',
+    src: "images/other/lake.jpg",
+    text: 'Lake Superior is my happy place',
+    tag: 'Other'
+  },
+  {
+    name: 'Fletcher',
+    src: "images/music/fletcher.jpg",
+    text: 'I usually scream sing to her songs',
+    tag: 'Music'
+  },
+  {
+    name: 'Tattoo',
+    src: "images/other/tats.jpg",
+    text: 'Looking to tell a story through pictures',
+    tag: 'Other'
+  },
+  {
+    name: 'Photography',
+    src: "images/other/photography.jpg",
+    text: 'I took this with a Samsung...',
     tag: 'Other'
   }
 ];
@@ -385,34 +379,29 @@ function interestElement(listItem, i) {
 // If you want to add more, just append items to the 'imageList' and then place them in here
 const interestGrid = e('div', {className: "row"},
   e('div', {className: "column"},
-    interestElement(imageList, 0),
-    interestElement(imageList, 1),
-    interestElement(imageList, 18),
-    interestElement(imageList, 2),
-    interestElement(imageList, 3),
-    interestElement(imageList, 5),
     interestElement(imageList, 19),
-    interestElement(imageList, 10)
-  ),
-  e('div', {className: "column"},
-    interestElement(imageList, 6),
-    interestElement(imageList, 17),
-    interestElement(imageList, 7),
-    interestElement(imageList, 21),
-    interestElement(imageList, 8),
-    interestElement(imageList, 14),
-    interestElement(imageList, 9)
-  ),
-  e('div', {className: "column"},
-    interestElement(imageList, 22),
-    interestElement(imageList, 11),
-    interestElement(imageList, 12),
-    interestElement(imageList, 23),
-    interestElement(imageList, 4),
-    interestElement(imageList, 13),
+    interestElement(imageList, 2),
     interestElement(imageList, 15),
-    interestElement(imageList, 16),
-    interestElement(imageList, 20)
+    interestElement(imageList, 12),
+    interestElement(imageList, 4),
+    interestElement(imageList, 18),
+    interestElement(imageList, 21)
+  ),
+  e('div', {className: "column"},
+    interestElement(imageList, 13),
+    interestElement(imageList, 1),
+    interestElement(imageList, 10),
+    interestElement(imageList, 14),
+    interestElement(imageList, 17),
+    interestElement(imageList, 6)
+  ),
+  e('div', {className: "column"},
+    interestElement(imageList, 3),
+    interestElement(imageList, 7),
+    interestElement(imageList, 22),
+    interestElement(imageList, 20),
+    interestElement(imageList, 4),
+    interestElement(imageList, 0)
   )
 );
 
