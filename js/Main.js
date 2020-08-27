@@ -359,9 +359,9 @@ const imageList = [
     tag: 'Other'
   },
   {
-    name: 'Photography',
-    src: "images/other/photography.jpg",
-    text: 'I took this with a Samsung...',
+    name: 'Design',
+    src: "images/other/rose.jpg",
+    text: 'Always creating...',
     tag: 'Other'
   }
 ];
