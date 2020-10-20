@@ -214,7 +214,7 @@ const teaching = {
   title: 'Teaching Assistant',
   location: 'RPI - Mathematical Sciences',
   image: 'images/jobs/rpi.png',
-  link: 'e('li', null, e('i', {className: "fas fa-brain"})),',
+  link: 'https://science.rpi.edu/mathematical-sciences/',
   details: teachingDetails()
 }
 
