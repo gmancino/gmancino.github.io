@@ -163,29 +163,6 @@ const web = {
   details: websiteDetails()
 };
 
-// Custom Logistic Regression details
-function logregTech() {
-  return(
-  e('div', {className: "tech"},
-  e('ul', null,
-    e('li', null, e('i', {className: "fas fa-brain"})),
-    e('li', null, e('i', {className: "fas fa-laptop-code"}))
-  ))
-)};
-
-function logRegDetails() {
-  return(
-    e('div', null,
-    logregTech(),
-      e('ul', null,
-        e('li', null, 'This was the final project for my graduate level theoretical optimization course.'),
-        e('li', null, 'All machine learning algorithms are solving some sort of optimization problem; in this particular project we wanted to create our own classification algorithm using a logistic regression model.'),
-        e('li', null, 'It was pretty amazing to see this thing work and gain a better understanding of the inner workings of \'machine learning!\'')
-      ),
-      e('br', null),
-      e('h5', {display: "inline"}, 'If you\'d like to view the full project, click ', e('a', {href: "docs/OptimizationProject.pdf"}, ' here.'))
-    )
-)};
 
 // Custom Teaching Assistant details
 function teachingTech() {
