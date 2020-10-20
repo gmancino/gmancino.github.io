@@ -193,7 +193,7 @@ function teachingTech() {
   e('div', {className: "tech"},
   e('ul', null,
     e('li', null, e('i', {className: "fas fa-brain"})),
-    e('li', null, e('i', {className: "fas fa-group"})),
+    e('li', null, e('i', {className: "fas fa-users"})),
     e('li', null, e('i', {className: "fas fa-laptop-code"}))
   	)
     )
