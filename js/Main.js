@@ -195,7 +195,8 @@ function teachingTech() {
     e('li', null, e('i', {className: "fas fa-brain"})),
     e('li', null, e('i', {className: "fas fa-group"})),
     e('li', null, e('i', {className: "fas fa-laptop-code"}))
-  ))
+  	)
+    )
 )};
 
 function teachingDetails() {
@@ -204,14 +205,14 @@ function teachingDetails() {
     teachingTech(),
       e('ul', null,
         e('li', null, 'I was a teaching assistant for the RPI Mathematical Sciences department from Fall 2018 - Spring 2019.'),
-        e('li', null, 'The courses I assisted in include: introductory calculus, multivariable calculus, and linear algebra'),
+        e('li', null, 'The courses I assisted in include: introductory calculus, multivariable calculus, and linear algebra.'),
         e('li', null, 'This was an exciting way to solidify my own understanding of mathematical concepts and pass on that knowledge to undergraduate students!\'')
       ))
 )};
 
 const teaching = {
   title: 'Teaching Assistant',
-  location: 'RPI - Mathematical Sciences,
+  location: 'RPI - Mathematical Sciences',
   image: 'images/jobs/rpi.png',
   link: 'e('li', null, e('i', {className: "fas fa-brain"})),',
   details: teachingDetails()
