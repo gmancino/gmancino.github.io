@@ -187,12 +187,34 @@ function logRegDetails() {
     )
 )};
 
-const logreg = {
-  title: 'Logistic Regression Classification',
-  location: 'RPI - MATH 6600',
-  image: 'images/other/math.png',
-  link: 'docs/OptimizationProject.pdf',
-  details: logRegDetails()
+// Custom Teaching Assistant details
+function teachingTech() {
+  return(
+  e('div', {className: "tech"},
+  e('ul', null,
+    e('li', null, e('i', {className: "fas fa-brain"})),
+    e('li', null, e('i', {className: "fas fa-group"})),
+    e('li', null, e('i', {className: "fas fa-laptop-code"}))
+  ))
+)};
+
+function teachingDetails() {
+  return(
+    e('div', null,
+    teachingTech(),
+      e('ul', null,
+        e('li', null, 'I was a teaching assistant for the RPI Mathematical Sciences department from Fall 2018 - Spring 2019.'),
+        e('li', null, 'The courses I assisted in include: introductory calculus, multivariable calculus, and linear algebra'),
+        e('li', null, 'This was an exciting way to solidify my own understanding of mathematical concepts and pass on that knowledge to undergraduate students!\'')
+      ))
+)};
+
+const teaching = {
+  title: 'Teaching Assistant',
+  location: 'RPI - Mathematical Sciences,
+  image: 'images/jobs/rpi.png',
+  link: 'e('li', null, e('i', {className: "fas fa-brain"})),',
+  details: teachingDetails()
 }
 
 // Function for rendering specifics about jobs
@@ -216,7 +238,7 @@ ReactDOM.render(
     e('br', null),
     job(web.title, web.location, web.image, web.link, web.details),
     e('br', null),
-    job(logreg.title, logreg.location, logreg.image, logreg.link, logreg.details)]}),
+    job(teaching.title, teaching.location, teaching.image, teaching.link, teaching.details)]}),
   document.getElementById('past')
 );
 

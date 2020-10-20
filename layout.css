@@ -339,6 +339,21 @@ footer a:hover {
   border: 3px solid var(--black);
 }
 
+/* Group logo */
+#past .fa-group {
+  border: 3px solid var(--header-bg-color);
+  border-radius: 50%;
+  padding: 10px;
+  transition: color, border;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+#past .fa-group:hover {
+  color: #5BE0F0;
+  border: 3px solid #FFFFFF;
+}
+
 /* Add title section */
 #header {
   font-family: "Fira Sans";
