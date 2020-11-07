@@ -383,7 +383,6 @@ const interestGrid = e('div', {className: "row"},
     interestElement(imageList, 2),
     interestElement(imageList, 15),
     interestElement(imageList, 12),
-    interestElement(imageList, 4),
     interestElement(imageList, 18),
     interestElement(imageList, 21)
   ),
