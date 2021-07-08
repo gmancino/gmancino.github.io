@@ -28,7 +28,7 @@ Following these lines, you can import custom `.js` files using something like:
 
 (This is mostly for my benefit)
 
-React works by doing all of the processing on the _users_ computer; this eliminates the need to do backend communication with normal Javascript. That being said, here are some important functions/concepts that I found confusing and wanted to make clear (at least for myself)
+React works by doing all of the processing on the _users'_ computer; this eliminates the need to do backend communication with normal Javascript. That being said, here are some important functions/concepts that I found confusing and wanted to make clear (at least for myself)
 
 ##### Summary
 
