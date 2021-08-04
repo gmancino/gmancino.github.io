@@ -11,53 +11,16 @@ function attention(args, color) {
   return e('h6', {style: {color: color}}, 'CHANGE YOUR INPUT TYPE TO STRING!!');
 };
 
-// Make eggholder function
-function eggholder(x, y) {
-  // Turn object to float
-  var x = x.valueOf();
-  var y = y.valueOf();
-  return(
-    Math.round(-(y + 47) * Math.sin(Math.pow(Math.abs( (x / 2) + (y + 47)), 1 / 2)) - x * Math.sin(Math.pow(Math.abs(x - (y + 47)), 1 /2)))
+// Function for rendering specifics about jobs
+function job(title, location, image_path, link, details) {
+  return e('div', null,
+    e('h3', null, title),
+    e('a', {href: link}, e('img', {src: image_path, alt: image_path})),
+    e('h5', {style: {fontStyle: "italic"}}, location),
+    e('br', null),
+    details,
+    e('br', null)
   )
-};
-
-// Make function for turning output value into Hex
-function numToColor(x) {
-  if (x < 0) {
-    var x = Math.pow(x, 2);
-  }
-
-  // Stolen from stack exchange
-  var r = x / Math.pow(256, 2);
-  var g = (x / 256) % 256;
-  var b = x % 256;
-
-  return 'rgb(' + r.toString() + ',' + g.toString() + ',' + b.toString() + ')';
-};
-
-// Make class for displaying Branin-Hoo
-class Func extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { x: 0, y: 0 };
-  }
-
-  _onMouseMove(e) {
-    this.setState({ x: e.screenX, y: e.screenY });
-  }
-
-  render() {
-    const { x, y } = this.state;
-    return (
-      e(
-        'div',
-        {onClick: this._onMouseMove.bind(this), style: {border: "3px solid", padding: "5px"}},
-        e('h4', null, 'Input values : (' + x.toString() + ', ' + y.toString() + ')'),
-        e('h4', null, 'Objective value : ', attention(eggholder(x, y).toString(), numToColor(eggholder(x, y)) ))
-      )
-    )
-  }
 };
 
 // Define main class for making toggle blocks
@@ -94,6 +57,44 @@ class Parent extends React.Component {
     )
   }
 };
+
+//
+// About me
+//
+const aboutInfo = e('div', null,
+  e('h5', null, 'Hello! My name is Gabriel, but you can call me Gabe.' +
+ ' I currently study mathematics at Rensselaer Polytechnic Institute in Troy, New York.' +
+ ' My research interests lie in the applications of distributed computing and nonlinear programming' +
+ ' to solve machine learning problems.'));
+
+// Render about me
+ReactDOM.render(
+  e(Parent, {title: 'Greetings', info: [aboutInfo, e('br', null)]}),
+  document.getElementById('intro')
+);
+
+
+//
+// Render current endeavors
+//
+
+function whatIDo() {
+  return(
+  e('div', null,
+    e('h5', null, 'Distributed optimization frameworks that are able to fully utilize edge computing have gained interest in the last few years. I am interested in providing theoretical convergence guarantees for algorithms ran on such frameworks.'),
+    e('h5', null, 'This work is currently funded by IBM through the ', e('a', {href: "https://www.research.ibm.com/artificial-intelligence/horizons-network/"}, 'AI Horizons Network.'),
+    ' You can check out my profile ', e('a', {href: "https://airc.rpi.edu/people/staff/gabriel-mancino-ball"}, 'here.')),
+    e('h5', null, 'Some paper(s) I have co-authored:'),
+    e('h5', null, 'Gabriel Mancino-Ball, Yangyang Xu, and Jie Chen. ', e('a', {href: "https://arxiv.org/abs/2107.11321"}, 'A Decentralized Primal-Dual Framework for Non-convex Smooth Consensus Optimization.'),
+    ' Submitted 2021.')
+  )
+)};
+
+ReactDOM.render(
+  e(Parent, {title: 'Things I\'m doing',
+  info: whatIDo()}),
+  document.getElementById('current')
+);
 
 //
 // JOB SECTION!!
@@ -194,18 +195,6 @@ const teaching = {
   link: 'https://science.rpi.edu/mathematical-sciences/',
   details: teachingDetails()
 }
-
-// Function for rendering specifics about jobs
-function job(title, location, image_path, link, details) {
-  return e('div', null,
-    e('h3', null, title),
-    e('a', {href: link}, e('img', {src: image_path, alt: image_path})),
-    e('h5', {style: {fontStyle: "italic"}}, location),
-    e('br', null),
-    details,
-    e('br', null)
-  )
-};
 
 // Render things I've done
 ReactDOM.render(
@@ -406,39 +395,6 @@ const interestGrid = e('div', {className: "row"},
     interestElement(imageList, 11),
     interestElement(imageList, 9)
   )
-);
-
-//
-// About me
-//
-const aboutInfo = e('div', null,
-  e('h5', null, 'Hello! My name is Gabriel, but you can call me Gabe.' +
- ' I currently study mathematics at Rensselaer Polytechnic Institute in Troy, New York.' +
- ' My research interests lie in the applications of optimization and probability theory to solve machine learning problems.'));
-
-// Render about me
-ReactDOM.render(
-  e(Parent, {title: 'Greetings', info: [aboutInfo, e('br', null)]}),
-  document.getElementById('intro')
-);
-
-//
-// Render current endeavors
-//
-
-function whatIDo() {
-  return(
-  e('div', null,
-    e('h5', null, 'Distributed optimization frameworks that are able to fully utilize edge computing have gained interest in the last few years. I am interested in providing theoretical convergence guarantees for algorithms ran on such frameworks.'),
-    e('h5', null, 'This work is currently funded by IBM through the ', e('a', {href: "https://www.research.ibm.com/artificial-intelligence/horizons-network/"}, 'AI Horizons Network.')),
-    e('h5', null, 'You can check out my profile ', e('a', {href: "https://airc.rpi.edu/people/staff/gabriel-mancino-ball"}, 'here.'))
-  )
-)};
-
-ReactDOM.render(
-  e(Parent, {title: 'Things I\'m doing',
-  info: whatIDo()}),
-  document.getElementById('current')
 );
 
 // Render interests
