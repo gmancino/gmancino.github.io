@@ -6,7 +6,7 @@ const e = React.createElement;
 // EDIT ME TO CHANGE INFORMATION
 const user = {
   name: 'Gabriel Mancino-Ball',
-  title: 'Mathematics. Development. Design.',
+  description: 'Mathematics. Development. Design.',
   image: 'images/headshot.png',
   logo: 'images/uplogo.png',
   headerLinks: ['https://github.com/gmancino',
@@ -34,7 +34,7 @@ const header = e(
         e('i', {className: "fas fa-envelope-open-text"})
       )
     ),
-  e('h3', null, user.title,
+  e('h3', null, user.description,
   e('img', {src: user.image}))
   )
 );
@@ -48,7 +48,7 @@ ReactDOM.render(
 const footer = e(
   'footer',
   null,
-  'Updated on 08-12-2019  ',
+  'Updated on 08-04-2021  ',
   e('img', {src: user.logo, alt: "Logo", align: "top", width: "1.5%"}),
   '  Hosted on GitHub',
   e('br', null),
