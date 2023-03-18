@@ -5,7 +5,7 @@ const e = React.createElement;
 
 // EDIT ME TO CHANGE INFORMATION
 const user = {
-  name: 'Gabriel Mancino-Ball',
+  name: 'Dr. Gabriel Mancino-Ball',
   description: 'Mathematics. Development. Design.',
   image: 'images/headshot.png',
   logo: 'images/uplogo.png',
