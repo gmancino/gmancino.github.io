@@ -1,56 +1,157 @@
-<!DOCTYPE html>
-<html>
-  <head>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal website of Gabriel Mancino-Ball, PhD.">
+  <meta name="author" content="Gabriel Mancino-Ball">
+  <link rel="icon" type="img/png" href="images/uplogo.png">
+  <link rel="apple-touch-icon-precomposed" href="images/uplogo.png">
+  <title>Gabriel Mancino-Ball</title>
 
-    <!-- Set some meta data for encoding -->
-    <meta charset="UTF-8">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
 
-    <!-- Set title and description -->
-    <title>Gabriel Mancino-Ball</title>
-    <meta name="description" content="Mathematics. Development. Design.">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
 
-    <!-- Define relevant imports -->
-    <link rel="icon" type="img/png" href="images/uplogo.png">
-    <link rel="apple-touch-icon-precomposed" href="images/uplogo.png">
-    <link rel="stylesheet" type="text/css" href="layout.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <div class="row" style="padding:20px">
 
-  </head>
-  <body>
+       <div class="hidden-xs col-sm-3 col-md-2" id="sidebar" role="navigation" style="margin-top:180px">
+        <hr>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#hello">Hello</a></li>
+          <li><a href="#publications">Publications</a></li>
+        </ul>
+      </div>
 
-    <!-- Title section with links! -->
-    <div id="header"></div>
+      <div class="col-xs-12 col-sm-9 col-md-9">
 
-    <!-- Container script -->
-    <div class="container">
+        <div class="row">
+          <img src="img/headshot.png" class="pull-left" style="margin:20px
+          20px 20px 0; height:140px; width:140px; border-radius:100%"/>
+          <h1>Gabriel Mancino-Ball</h1>
+          <p class="lead">
+            Data Scientist, PhD<br>
+            gabriel.mancino.ball@gmail.com
+            <br>
+            <a href="https://www.linkedin.com/in/gabriel-mancino-ball" class="icon">
+              <i class="fa fa-linkedin fa-lg"></i>
+            </a>
+            <a href="https://github.com/gmancino" class="icon">
+              <i class="fa fa-github fa-lg"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=UFYkMTgAAAAJ&hl" class="icon">
+              <i class="fa fa-graduation-cap fa-lg"></i>
+            </a>
+          </p>
+        </div>
 
-      <!-- Intro section -->
-      <div id="intro"></div>
+        <hr>
 
-      <!-- What you are currently doing -->
-      <div id="current"></div>
+        <div class="row">
+          <h2><a name="hello"></a>Hello</h2>
+          <p>
+          I am a data scientist at
+          <a href="https://digital.evonik.com/en/team">Evonik</a> residing in Boston, Massachusetts.
+          Broadly, I am interested in mathematical optimization and large-scale computing. Specifically, I am happiest when I am designing, training, and deploying machine learning models in production settings. Application spaces of interest to me are graph machine learning, natural language processing, and "generative AI."
+          </p>
+          <p>
+          I completed my Ph.D. in mathematics at Rensselaer Polytechnic Institute where I was advised by
+          <a href="https://xu-yangyang.github.io">Yangyang Xu</a>
+          and mentored by <a href="https://jiechenjiechen.github.io">Jie Chen</a>. My research focus was on providing complexity analysis for first-order optimization methods in decentralized computing environments.
+          </p>
+          <p>
+          My resume is available upon request.
+          </p>
+        </div>
 
-      <!-- Some cool things you have done -->
-      <div id="past"></div>
+        <div class="row">
+          <h2><a name="publications"></a>Publications</h2>
+          <hr>
+          <h3>Preprints</h3>
+          <p>
+            <strong>Variance-reduced accelerated methods for decentralized stochastic double-regularized nonconvex strongly-concave minimax problems</strong><br>
+            Gabriel Mancino-Ball and Yangyang Xu<br>
+            <div class="btn-group-xs">
+              <a href="https://arxiv.org/abs/2307.07113"
+              class="btn btn-default">Paper</a>
+              <a href="https://github.com/RPI-OPT/VRLM"
+              class="btn btn-default">Code</a>
+            </div>
+          </p>
+          <h3>2024</h3>
+          <p>
+            <strong>Jointly Improving the Sample and Communication Complexities in Decentralized Stochastic Minimax Optimization</strong><br>
+            Xuan Zhang, Gabriel Mancino-Ball, Necdet Serhat Aybat, and Yangyang Xu<br>
+            <em>Proceedings of the 38th AAAI Conference on Artificial Intelligence</em>, 2024
+            <div class="btn-group-xs">
+              <a href="https://arxiv.org/abs/2307.09421"
+              class="btn btn-default">Paper</a>
+              <a href="https://github.com/gmancino/DGDA-VR"
+              class="btn btn-default">Code</a>
+            </div>
+          </p>
+          <h3>2023</h3>
+          <p>
+            <strong>Proximal stochastic recursive momentum methods for nonconvex composite decentralized optimization</strong><br>
+            Gabriel Mancino-Ball, Shengnan Miao, Yangyang Xu, and Jie Chen<br>
+            <em>Proceedings of the 37th AAAI Conference on Artificial Intelligence</em>, 2023
+            <div class="btn-group-xs">
+              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26087"
+              class="btn btn-default">Paper</a>
+              <a href="https://github.com/gmancino/DEEPSTORM"
+              class="btn btn-default">Code</a>
+            </div>
+          </p>
+          <p>
+            <strong>A decentralized primal-dual framework for non-convex smooth consensus optimization</strong><br>
+            Gabriel Mancino-Ball, Yangyang Xu, and Jie Chen<br>
+            <em>IEEE Transactions on Signal Processing</em>, 2023
+            <div class="btn-group-xs">
+              <a href="https://arxiv.org/abs/2107.11321"
+              class="btn btn-default">Paper</a>
+              <a href="https://github.com/RPI-OPT/ADAPD"
+              class="btn btn-default">Code</a>
+            </div>
+          </p>
+        </div>
 
-      <!-- Stuff you are interested in outside of work -->
-      <div id="interests"></div>
+      </div>
 
-      <!-- Acknowledge the shoulders this website is standing on -->
-      <div id="footer"></div>
-
-      <!-- Import react -->
-      <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-
-      <!-- Import custom Javascript files -->
-      <script src="js/Header.js"></script>
-      <script src="js/Main.js"></script>
-
-    <!-- Close container -->
     </div>
 
-  </body>
+    <hr>
 
+    <footer>
+    &nbsp;
+    </footer>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript"
+     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/javascript" src="/js/main.js"></script>
+</body>
 </html>
