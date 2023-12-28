@@ -12,7 +12,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/main.css">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -31,6 +31,7 @@
         <ul class="nav nav-pills nav-stacked">
           <li><a href="#hello">Hello</a></li>
           <li><a href="#publications">Publications</a></li>
+          <li><a href="#projects">Selected Projects</a></li>
         </ul>
       </div>
 
@@ -45,10 +46,10 @@
             gabriel.mancino.ball@gmail.com
             <br>
             <a href="https://www.linkedin.com/in/gabriel-mancino-ball" class="icon">
-              <i class="fa fa-linkedin fa-lg"></i>
+              <i class="fab fa-linkedin-in fa-lg"></i>
             </a>
             <a href="https://github.com/gmancino" class="icon">
-              <i class="fa fa-github fa-lg"></i>
+              <i class="fab fa-github fa-lg"></i>
             </a>
             <a href="https://scholar.google.com/citations?user=UFYkMTgAAAAJ&hl" class="icon">
               <i class="fa fa-graduation-cap fa-lg"></i>
@@ -60,6 +61,7 @@
 
         <div class="row">
           <h2><a name="hello"></a>Hello</h2>
+          <hr>
           <p>
           I am a data scientist at
           <a href="https://digital.evonik.com/en/team">Evonik</a> residing in Boston, Massachusetts.
@@ -121,6 +123,27 @@
               <a href="https://arxiv.org/abs/2107.11321"
               class="btn btn-default">Paper</a>
               <a href="https://github.com/RPI-OPT/ADAPD"
+              class="btn btn-default">Code</a>
+            </div>
+          </p>
+        </div>
+
+        <div class="row">
+          <h2><a name="projects"></a>Selected Projects</h2>
+          <hr>
+          <p>
+            <strong>A PyTorch implementation of the FastGCN method</strong><br>
+            The goal of this project was to create a PyTorch implementation of the <a href="https://arxiv.org/abs/1801.10247">FastGCN</a> method. The code base is designed for large-scale datasets (i.e. the <a href="https://ogb.stanford.edu">OGB</a> datasets) with new features such as mini-batch inference. All models were built from scratch to facilitate maximum learning.<br>
+            <div class="btn-group-xs">
+              <a href="https://github.com/gmancino/fastgcn-pytorch"
+              class="btn btn-default">Code</a>
+            </div>
+          </p>
+          <p>
+            <strong>Decentralized training of graph convolutional networks</strong><br>
+            The goal of this project was study the effect of decentralized distributed training of graph neural networks. We utilized up to 32 GPUs to perform parallel gradient computations with local data and performed neighbor communications with MPI. This project served as a foundation for future projects where training with multiple GPUs was required.<br>
+            <div class="btn-group-xs">
+              <a href="https://github.com/gmancino/decentralized_gcn"
               class="btn btn-default">Code</a>
             </div>
           </p>
