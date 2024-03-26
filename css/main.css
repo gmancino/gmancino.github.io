@@ -7,3 +7,11 @@ span:lang(ja) {
 span:lang(cn) {
   font-family: sans-serif;
 }
+footer {
+	margin-top: 5%;
+	margin-bottom: 0%;
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	padding-bottom: 100px;
+}
