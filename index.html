@@ -30,7 +30,8 @@
        <div class="hidden-xs col-sm-3 col-md-2" id="sidebar" role="navigation" style="margin-top:180px">
         <hr>
         <ul class="nav nav-pills nav-stacked">
-          <li><a href="#hello">Hello</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#publications">Publications</a></li>
           <li><a href="#projects">Selected Projects</a></li>
         </ul>
@@ -43,7 +44,7 @@
           20px 20px 0; height:140px; width:140px; border-radius:100%"/>
           <h1>Gabriel Mancino-Ball</h1>
           <p class="lead">
-            Machine Learning Researcher, PhD<br>
+            Machine Learning Research Scientist, PhD<br>
             gabriel.mancino.ball@gmail.com
             <br>
             <a href="https://www.linkedin.com/in/gabriel-mancino-ball" class="icon">
@@ -61,16 +62,27 @@
         <hr>
 
         <div class="row">
-          <h2><a name="hello"></a>Hello</h2>
+          <h2><a name="research"></a>Research</h2>
           <hr>
           <p>
-          I am a machine learning researcher at <a href="https://str.us">STR</a> residing in Boston, Massachusetts. Previously, I was a data scientist at <a href="https://digital.evonik.com/en/team">Evonik</a>.
-          Broadly, I am interested in the intersection of optimization, linear algebra, and deep learning. Specifically, I am interested in graph deep learning, first-order optimization methods, and minimax optimization.
+          I am primarily interested in the intersection of machine learning and distributed systems. 
+          My work focuses on two fronts: applying machine learning in distributed environments and designing distributed algorithms for large-scale training. 
+          </p>
+        </div>
+
+        <div class="row">
+          <h2><a name="about"></a>About</h2>
+          <hr>
+          <p>
+          I am a machine learning research scientist at <a href="https://str.us">STR</a> residing in Boston, Massachusetts.
+          I lead the algorithms team within the Machine Intelligence for Networked Domains (MIND) group.
+          Previously, I was a data scientist at <a href="https://digital.evonik.com/en/team">Evonik</a>.
           </p>
           <p>
           I completed my PhD in mathematics at Rensselaer Polytechnic Institute where I was advised by
           <a href="https://xu-yangyang.github.io">Yangyang Xu</a>
-          and mentored by <a href="https://jiechenjiechen.github.io">Jie Chen</a>. My research focus was on providing complexity analysis for first-order optimization methods in decentralized computing environments.
+          and mentored by <a href="https://jiechenjiechen.github.io">Jie Chen</a>. 
+          My research focused on providing complexity analysis for first-order optimization methods in decentralized computing environments.
           </p>
           <p>
           My resume is available upon request.
@@ -87,8 +99,6 @@
             <div class="btn-group-xs">
               <a href="https://arxiv.org/abs/2508.00267"
               class="btn btn-default">Paper</a>
-              <a href="https://github.com/RPI-OPT/CV-ADAM-GNN"
-              class="btn btn-default">Code</a>
             </div>
           </p>
           <p>
@@ -100,22 +110,24 @@
             </div>
           </p>
           <p>
-            <strong>BoFire: Bayesian Optimization Framework Intended for Real Experiments</strong><br>
-            Johannes P. Dürholt, et. al.<br>
-            <div class="btn-group-xs">
-              <a href="https://arxiv.org/abs/2408.05040"
-              class="btn btn-default">Paper</a>
-              <a href="https://github.com/experimental-design/bofire"
-              class="btn btn-default">Code</a>
-            </div>
-          </p>
-          <p>
             <strong>Variance-reduced accelerated methods for decentralized stochastic double-regularized nonconvex strongly-concave minimax problems</strong><br>
             Gabriel Mancino-Ball and Yangyang Xu<br>
             <div class="btn-group-xs">
               <a href="https://arxiv.org/abs/2307.07113"
               class="btn btn-default">Paper</a>
               <a href="https://github.com/RPI-OPT/VRLM"
+              class="btn btn-default">Code</a>
+            </div>
+          </p>
+          <h3>2025</h3>
+          <p>
+            <strong>BoFire: Bayesian Optimization Framework Intended for Real Experiments</strong><br>
+            Johannes P. Dürholt, et. al.<br>
+            <em>Journal of Machine Learning Research</em>, 2025
+            <div class="btn-group-xs">
+              <a href="http://www.jmlr.org/papers/v26/24-1540.html"
+              class="btn btn-default">Paper</a>
+              <a href="https://github.com/experimental-design/bofire"
               class="btn btn-default">Code</a>
             </div>
           </p>
@@ -169,7 +181,7 @@
           </p>
           <p>
             <strong>Decentralized training of graph convolutional networks</strong><br>
-            The goal of this project was study the effect of (decentralized) distributed training of graph neural networks. Up to 32 GPUs were utilized to perform parallel gradient computations with local data while MPI was used to propagate updates throughout the GPUs. This project served as a foundation for future projects where training with multiple GPUs was required.<br>
+            The goal of this project was to study the effect of (decentralized) distributed training of graph neural networks. Up to 32 GPUs were utilized to perform parallel gradient computations with local data while MPI was used to propagate updates throughout the GPUs. This project served as a foundation for future projects where training with multiple GPUs was required.<br>
             <div class="btn-group-xs">
               <a href="https://github.com/gmancino/decentralized_gcn"
               class="btn btn-default">Code</a>
